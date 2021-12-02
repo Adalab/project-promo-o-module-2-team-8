@@ -7,16 +7,26 @@
   color: #6b6b6b;
   font-family: $fontText;
   line-height: 3;
-  padding: 18px 61px 20px 61px;
-  &__logo {
-    width: 105px;
-    height: 40px;
-    align-items: center;
+  &__copy {
+    width: 198px;
+    height: 20px;
+    margin: 18px 12px;
   }
-  @media (min-width: $tablet) {
+  &__logo {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: $tablet) {
+  .footer {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 40px;
+    &__copy {
+      margin: 15px 40px 22px;
+    }
+    &__logo {
+      margin: 15px 40px 10px;
+    }
   }
 }
