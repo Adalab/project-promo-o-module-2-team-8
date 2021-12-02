@@ -1,1 +1,8 @@
-
+.main {
+  &__text {
+    &--title {
+      font-family: $fontText;
+      color: $colorMainTitle;
+    }
+  }
+}
