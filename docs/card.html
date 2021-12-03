@@ -1,42 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Cards</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Open+Sans:ital,wght@0,300;0,600;1,600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-      integrity="sha384AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-      crossorigin="anonymous"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cards</title>
 
-  <body>
-    <header>
-      
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Open+Sans:ital,wght@0,300;0,600;1,600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./assets/css/main.css" />
+</head>
+
+<body>
+  <header class="awesome">
+    <header class="awesome">
+      <div class="awesome__container">
+        <img class="awesome__container--img" src="./assets/images/logo-awesome-profile-cards.svg" title="logo awesome"
+          alt="logo-awesome" />
+      </div>
     </header>
-    <main></main>
-    <footer><footer class="footer">
-  <div class="footer__container">
-    <small class="footer__container--copy"
-      >Awesome profile-cards &copy; 2021</small
-    >
 
-    <div class="footer__container--logo">
-      <img src="./assets/images/logo-adalab.png" />
-    </div>
-  </div>
-</footer>
-</footer>
+  </header>
+  <main class="main">
+    <section class="section1">
+      <div class="section1__reset">
+        <i class="far fa-trash-alt"></i>
+        <p class="section1__reset--text">Reset</p>
+      </div>
+      <article class="section1__card">
+        <h1 class="userName">Nombre apellido</h1>
+        <h2 class="job">Front developer</h2>
+        <img src="" alt="" />
+        <nav>
+          <ul class="section1__card--bar">
+            <li><i class="fa-solid fa-mobile-screen"></i></li>
+            <li><i class="far fa-envelope"></i></li>
+            <li><i class="fa-brands fa-linkedin-in"></i></li>
+            <li><i class="fa-brands fa-github-alt"></i></li>
+          </ul>
+        </nav>
+      </article>
+    </section>
 
-    <script src="./assets/js/main.js"></script>
-  </body>
+    <section class="section2">
+      <section class="section2__design">
+        <h3>Diseña</h3>
+      </section>
+      <section class="section2__complete"></section>
+      <section class="section2__share">
+        <i class="fas fa-share-alt"></i>
+      </section>
+    </section>
+
+  </main>
+  <footer>
+    <footer class="footer">
+      <small class="footer__copy">Awesome profile-cards &copy; 2021</small>
+
+      <div class="footer__logo">
+        <img src="./assets/images/logo-adalab.png" width="105px" height="40px" />
+      </div>
+
+    </footer>
+  </footer>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+
 </html>
