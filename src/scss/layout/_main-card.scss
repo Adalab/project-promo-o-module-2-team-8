@@ -1,0 +1,21 @@
+.section1 {
+  background-color: $silver;
+  &__reset {
+    background-color: $silver;
+    border: 1px solid $white;
+    color: $gunMetal;
+    height: 30px;
+    width: 75px;
+    line-height: 20px;
+    border-radius: 22.5px;
+    font-size: 12px;
+    margin: 38px 0 26px 45px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &--text {
+      text-transform: uppercase;
+    }
+  }
+}
