@@ -1,5 +1,8 @@
 .section1 {
-  background-color: $silver;
+  // background-color: $silver;
+  background-color: brown;
+  padding: 38px 35px 40px 45px;
+
   &__reset {
     background-color: $silver;
     border: 1px solid $white;
@@ -9,7 +12,8 @@
     line-height: 20px;
     border-radius: 22.5px;
     font-size: 12px;
-    margin: 38px 0 26px 45px;
+    // margin: 38px 0 26px 45px;
+
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -18,4 +22,21 @@
       text-transform: uppercase;
     }
   }
+
+  &__card {
+    background: linear-gradient(to bottom, $whiteFour, $whiteTwo 9%);
+    width: 240px;
+    height: 329px;
+    padding: 21px 14px 4px 20px;
+
+    &--userName {
+      font-size: 18px;
+    }
+
+    &--job {
+      font-size: 16px;
+    }
+  }
+
+  // &--bar{}
 }
