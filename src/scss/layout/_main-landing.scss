@@ -1,8 +1,49 @@
 .main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 100px;
+  height: 100%;
+  &__image {
+    margin-bottom: 50px;
+  }
+  &__button {
+    background-color: $startButton;
+    color: $whiteFour;
+    height: 42px;
+    width: 120px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-family: $fontBtn;
+  }
+  &__icon {
+    list-style-type: none;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid $dullOrange;
+    font-family: $fontText;
+
+    width: 270px;
+    height: 74px;
+  }
+
   &__text {
-    &--title {
+    &--paragraph {
       font-family: $fontText;
+      color: $darkGreenBlue;
+      margin-bottom: 50px;
+    }
+    &--title {
+      font-family: $fontTitle;
       color: $colorMainTitle;
+      font-size: 19px;
     }
   }
 }
