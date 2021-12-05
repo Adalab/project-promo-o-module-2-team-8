@@ -1,11 +1,13 @@
 .main {
+  background-color: $whiteFour;
+  width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 100px;
-  height: 100%;
+
   &__image {
     margin-bottom: 50px;
   }
@@ -44,6 +46,7 @@
       font-family: $fontTitle;
       color: $colorMainTitle;
       font-size: 19px;
+      font-family: $fontText;
     }
   }
 }
