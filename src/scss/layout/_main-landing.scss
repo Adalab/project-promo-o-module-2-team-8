@@ -1,16 +1,62 @@
 .main {
   background-color: $whiteFour;
   width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 95px 26px 30px;
 
   &__image {
     margin-bottom: 50px;
+    width: 250px;
+    height: 64px;
   }
+
+  &__text {
+    &--title {
+      font-family: $fontTitle;
+      color: $colorMainTitle;
+      font-size: 19px;
+      font-weight: bold;
+      width: 223px;
+      height: 24px;
+    }
+    &--paragraph {
+      font-family: $fontText;
+      color: $darkGreenBlue;
+      margin-bottom: 18px;
+      width: 264px;
+      height: 38px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+  }
+
+  &__section {
+    list-style-type: none;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 2px solid $dullOrange;
+    border-radius: 5px;
+    font-family: $fontText;
+    width: 270px;
+    height: 74px;
+    &--list {
+      color: $gunMetal;
+      font-size: 13px;
+      font-weight: bold;
+    }
+    &--icon {
+      color: $dullOrange;
+      font-size: 25px;
+    }
+  }
+
   &__button {
     background-color: $startButton;
     color: $whiteFour;
@@ -21,36 +67,6 @@
     border: none;
     text-transform: uppercase;
     margin-top: 40px;
-    margin-bottom: 40px;
     font-family: $fontBtn;
-  }
-  &__icon {
-    list-style-type: none;
-    text-transform: capitalize;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid $dullOrange;
-    border-radius: 5px;
-    opacity: 0.2;
-    font-family: $fontText;
-    color: $dullOrange;
-    width: 270px;
-    height: 74px;
-  }
-
-  &__text {
-    &--paragraph {
-      font-family: $fontText;
-      color: $darkGreenBlue;
-      margin-bottom: 50px;
-    }
-    &--title {
-      font-family: $fontTitle;
-      color: $colorMainTitle;
-      font-size: 19px;
-      font-family: $fontText;
-    }
   }
 }
