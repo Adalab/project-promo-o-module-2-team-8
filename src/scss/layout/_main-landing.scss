@@ -1,52 +1,70 @@
 .main {
   background-color: $whiteFour;
   width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 95px 26px 30px;
 
   &__image {
     margin-bottom: 50px;
-  }
-  &__button {
-    background-color: $startButton;
-    color: $whiteFour;
-    height: 42px;
-    width: 120px;
-    border-radius: 50px;
-    text-transform: uppercase;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    font-family: $fontBtn;
-  }
-  &__icon {
-    list-style-type: none;
-    text-transform: capitalize;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid $dullOrange;
-    font-family: $fontText;
-    color: $dullOrange;
-    width: 270px;
-    height: 74px;
+    width: 250px;
+    height: 64px;
   }
 
   &__text {
-    &--paragraph {
-      font-family: $fontText;
-      color: $darkGreenBlue;
-      margin-bottom: 50px;
-    }
     &--title {
       font-family: $fontTitle;
       color: $colorMainTitle;
       font-size: 19px;
-      font-family: $fontText;
+      font-weight: bold;
     }
+    &--paragraph {
+      font-family: $fontText;
+      color: $darkGreenBlue;
+      margin-bottom: 18px;
+      width: 264px;
+      height: 38px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+  }
+
+  &__section {
+    list-style-type: none;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 2px solid rgba(225, 115, 52, 0.5);
+    border-radius: 5px;
+    font-family: $fontText;
+    width: 270px;
+    height: 74px;
+    &--list {
+      color: $gunMetal;
+      font-size: 13px;
+      font-weight: bold;
+    }
+    &--icon {
+      color: $dullOrange;
+      font-size: 25px;
+    }
+  }
+
+  &__button {
+    background-color: $startButton;
+    color: $whiteFour;
+    font-weight: bold;
+    height: 42px;
+    width: 120px;
+    border-radius: 50px;
+    border: none;
+    text-transform: uppercase;
+    margin-top: 40px;
+    font-family: $fontBtn;
   }
 }
