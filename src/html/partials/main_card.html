@@ -19,12 +19,191 @@
   </article>
 </section>
 
-<section class="section2">
-  <section class="section2__design">
-    <h3>Diseña</h3>
-  </section>
-  <section class="section2__complete"></section>
-  <section class="section2__share">
-    <i class="fas fa-share-alt"></i>
-  </section>
+<section class="section2 section2-wrapper">
+  <form action="" class="section2__form">
+    <!-- Design fieldset -->
+    <fieldset class="fieldsetContainer section2__form--designFieldset">
+      <!-- FALTA PONER CURSOR POINTER Y TITLE DONDE SE TENGA QUE CLICKAR -->
+      <legend class="titleContainer">
+        <div class="titleContainer__titleItem">
+          <i class="fa-light fa-object-ungroup"></i>
+          <h2 class="titleContainer__title">Diseña</h2>
+        </div>
+        <i class="js-arrow fa-regular fa-chevron-up"></i>
+      </legend>
+
+      <div class="js-collapsed designContainer">
+        <label>Colores</label>
+        <nav>
+          <ul class="designContainer__choosePalette">
+            <li class="designContainer__choosePalette--palette">
+              <input
+                class="inputRadio"
+                id="palette1"
+                type="radio"
+                name="palette"
+              />
+              <div class="color color-darkGreen"></div>
+              <div class="color color-blue"></div>
+              <div class="color color-green"></div>
+            </li>
+
+            <li class="designContainer__choosePalette--palette">
+              <input
+                class="inputRadio"
+                id="palette2"
+                type="radio"
+                name="palette"
+              />
+
+              <div class="color color-darkRed"></div>
+              <div class="color color-red"></div>
+              <div class="color color-tomato"></div>
+            </li>
+            <li class="designContainer__choosePalette--palette">
+              <input
+                class="inputRadio"
+                id="palette3"
+                type="radio"
+                name="palette"
+              />
+              <div class="color color-slate"></div>
+              <div class="color color-orange"></div>
+              <div class="color color-lightBlue"></div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </fieldset>
+
+    <!-- Fill fieldset -->
+    <fieldset class="fieldsetContainer section2__form--completeFieldset">
+      <legend class="titleContainer">
+        <div class="titleContainer__titleItem">
+          <i class="fa-light fa-keyboard"></i>
+          <h2 class="titleContainer__title">Rellena</h2>
+        </div>
+        <i class="fa-regular fa-chevron-up"></i>
+      </legend>
+      <div class="js-collapsed labelsWrapper">
+        <label class="label" for="completeName">
+          Nombre completo
+          <input
+            class="completeFieldset-input"
+            id="completeName"
+            type="text"
+            name="completeName"
+            placeholder="Ej: Sally Jill"
+            pattern="^\b([A-ZÀ-ÿ][-,a-z ']+[ ]*)+$"
+            title="Introduce tu nombre o tu nombre completo"
+            required
+          />
+        </label>
+        <label class="label labelsWrapper__jobLabel" for="job">
+          Puesto
+          <input
+            class="completeFieldset-input"
+            id="job"
+            type="text"
+            name="job"
+            placeholder="Ej: Front-end unicorn"
+            title="Introduce el puesto que desempeñas"
+            required
+          />
+        </label>
+        <label class="label labelsWrapper__imgLabel" for="img">
+          Imagen de perfil
+          <div class="labelsWrapper__imgLabel--container">
+            <button class="imgLabel-btn">Añadir imagen</button>
+            <div class="imgLabel-div"></div>
+          </div>
+        </label>
+        <label class="label" for="emailAddress">
+          Email
+          <input
+            class="completeFieldset-input"
+            placeholder="nombre.apellidos@mail.com"
+            id="emailAddress"
+            type="email"
+            name="email"
+            title="Introduce un email válido"
+            pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?.)+[.][a-z0-9](?:[a-z0-9-]*[a-z0-9])?$"
+            required
+          />
+        </label>
+        <label class="label" for="phoneNumber">
+          Teléfono
+          <input
+            class="completeFieldset-input contact__form--item phoneNumber"
+            placeholder="Ej: 555-55-55-55"
+            id="phoneNumber"
+            type="tel"
+            name="phoneNumber"
+            pattern="^[0-9]{9}$"
+            title="Por favor, introduce tu número de teléfono"
+          />
+        </label>
+        <label class="label" for="linkedin">
+          Linkedin
+          <input
+            class="completeFieldset-input"
+            placeholder="Ej: linkedin.com/in/sally.hill"
+            id="linkedin"
+            type="text"
+            name="linkedin"
+            title="Introduce tu linkedin"
+            required
+          />
+        </label>
+        <label class="label" for="gitHub">
+          GitHub
+          <input
+            class="completeFieldset-input"
+            placeholder="Ej: @sally-hill"
+            id="gitHub"
+            type="text"
+            name="gitHub"
+            title="Introduce tu GitHub"
+            required
+          />
+        </label>
+      </div>
+    </fieldset>
+
+    <!-- Share fieldset -->
+    <fieldset class="fieldsetContainer section2__form--shareFieldset">
+      <legend class="titleContainer">
+        <div class="titleContainer__titleItem">
+          <i class="fas fa-share-alt"></i>
+          <h2 class="titleContainer__title">Comparte</h2>
+        </div>
+        <i class="arrowUp fa-regular fa-chevron-up"></i>
+      </legend>
+      <div class="js-collapsed">
+        <div class="btnContainer">
+          <button class="share-btn">
+            <i class="fa-solid fa-address-card"></i>
+            Crear tarjeta
+          </button>
+        </div>
+        <section class="shareSection">
+          <p class="shareSection__paragraph">
+            La tarjeta ha sido creada:
+          </p>
+          <a
+            class="link shareSection__link-share"
+            title="Ir a la tarjeta"
+            href="#"
+            >https://awesome-profile-card.com?id=A456DF0001</a
+          >
+          <a
+            class="link shareSection__link-shareTwitter"
+            title="Comparte en twitter la tarjeta"
+            href="#"
+            ><i class="fa-brands fa-twitter"></i> Compartir en twitter</a
+          >
+        </section>
+      </div>
+    </fieldset>
+  </form>
 </section>
