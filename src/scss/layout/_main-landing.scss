@@ -1,6 +1,7 @@
-.main {
+.mainLanding {
   background-color: $whiteFour;
   width: 100%;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,8 +11,8 @@
 
   &__image {
     margin-bottom: 50px;
-    width: 250px;
-    height: 64px;
+    width: 350px;
+    height: 100px;
   }
 
   &__text {
@@ -24,7 +25,7 @@
     &--paragraph {
       font-family: $fontText;
       color: $darkGreenBlue;
-      margin-bottom: 18px;
+      margin-bottom: 30px;
       width: 264px;
       height: 38px;
       font-size: 13px;
@@ -57,14 +58,23 @@
 
   &__button {
     background-color: $startButton;
-    color: $whiteFour;
     font-weight: bold;
     height: 42px;
     width: 120px;
     border-radius: 50px;
     border: none;
     text-transform: uppercase;
-    margin-top: 40px;
+    margin-top: 60px;
     font-family: $fontBtn;
+    &--link {
+      color: $whiteFour;
+      text-decoration: none;
+    }
+  }
+}
+
+@media (min-width: $tablet) {
+  .mainLanding {
+    height: 90vh;
   }
 }
