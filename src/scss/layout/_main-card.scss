@@ -1,19 +1,25 @@
+.main {
+  padding: 0px;
+}
+
 .section1 {
-  // background-color: $silver;
-  background-color: brown;
-  padding: 38px 35px 40px 45px;
+  background: linear-gradient(#bfcdd0, #dde9ed);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px 0px;
 
   &__reset {
+    grid-column: 2/3;
     background-color: $silver;
-    border: 1px solid $white;
+    border: 1px solid $whiteTwo;
     color: $gunMetal;
     height: 30px;
     width: 75px;
     line-height: 20px;
     border-radius: 22.5px;
     font-size: 12px;
-    // margin: 38px 0 26px 45px;
-
+    margin-bottom: 20px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -22,24 +28,85 @@
       text-transform: uppercase;
     }
   }
+}
 
-  &__card {
-    background: linear-gradient(to bottom, $whiteFour, $whiteTwo 9%);
-    width: 240px;
-    height: 329px;
-    padding: 21px 14px 4px 20px;
+.btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 45px;
+  margin-bottom: 20px;
+}
+.card {
+  grid-column: 2/3;
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  grid-template-rows: 65px 1fr 45px;
+  background-color: $whiteTwo;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.35);
+  width: 240px;
+  height: 330px;
+  padding: 10px 0;
 
-    &--userName {
-      font-size: 18px;
-    }
-
-    &--job {
-      font-size: 16px;
-    }
+  &__rectangle {
+    grid-column: 1/2;
+    position: relative;
+    margin-top: 13px;
+    width: 5px;
+    height: 42px;
+    background-color: $dirtyBlue;
+  }
+  &__user--userName {
+    margin-top: 10px;
+    margin-bottom: 4px;
+    grid-column: 2/3;
+    text-align: left;
+    font-family: $montserratFont;
+    font-size: 18px;
+    color: $slate;
   }
 
-  // &--bar{}
+  &__user--job {
+    margin-bottom: 10px;
+    grid-column: 2/3;
+    text-align: left;
+    font-family: $montserratFont;
+    font-size: 16px;
+    color: $gunMetal;
+  }
+  &__img {
+    grid-column: 1/4;
+    background-image: url("../images/fondo.jpg");
+    background-position: top center;
+    background-size: cover;
+    background-color: $whiteTwo;
+    width: 240px;
+    height: 200px;
+  }
+  &__bar {
+    grid-column: 2/3;
+    display: flex;
+    list-style-type: none;
+    margin-top: 10px;
+
+    &--icons {
+      display: flex;
+      justify-content: center;
+      background-color: white;
+      width: 32px;
+      height: 32px;
+      border: solid 2px $hospitalGreen;
+      border-radius: 50%;
+      padding: 5px;
+      margin-right: 10px;
+
+      a {
+        color: $darkGreenBlue;
+      }
+    }
+  }
 }
+//
 
 // SECTION 2
 * {
@@ -102,10 +169,10 @@
 .color-darkGreen {
   background-color: $darkGreenBlue;
 }
-.color-blue{
+.color-blue {
   background-color: $dirtyBlue;
 }
-.color-green{
+.color-green {
   background-color: $hospitalGreen;
 }
 
@@ -113,10 +180,10 @@
 .color-darkRed {
   background-color: $driedBlood;
 }
-.color-red{
+.color-red {
   background-color: $rustyRed;
 }
-.color-tomato{
+.color-tomato {
   background-color: $tomato;
 }
 
@@ -124,13 +191,12 @@
 .color-slate {
   background-color: $slate;
 }
-.color-orange{
+.color-orange {
   background-color: $fadedOrange;
 }
-.color-lightBlue{
+.color-lightBlue {
   background-color: $lightGreyBlue;
 }
-
 
 /* Compleat Fieldset */
 .labelsWrapper {
@@ -240,7 +306,6 @@
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
   }
 }
-
 
 /* JS */
 .js-collapsed {
