@@ -1,19 +1,25 @@
+.main {
+  padding: 0px;
+}
+
 .section1 {
-  // background-color: $silver;
-  background-color: brown;
-  padding: 38px 35px 40px 45px;
+  background: linear-gradient(#bfcdd0, #dde9ed);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px 0px;
 
   &__reset {
+    grid-column: 2/3;
     background-color: $silver;
-    border: 1px solid $white;
+    border: 1px solid $whiteTwo;
     color: $gunMetal;
     height: 30px;
     width: 75px;
     line-height: 20px;
     border-radius: 22.5px;
     font-size: 12px;
-    // margin: 38px 0 26px 45px;
-
+    margin-bottom: 20px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -22,21 +28,286 @@
       text-transform: uppercase;
     }
   }
+}
 
-  &__card {
-    background: linear-gradient(to bottom, $whiteFour, $whiteTwo 9%);
-    width: 240px;
-    height: 329px;
-    padding: 21px 14px 4px 20px;
+.btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 45px;
+  margin-bottom: 20px;
+}
+.card {
+  grid-column: 2/3;
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  grid-template-rows: 65px 1fr 45px;
+  background-color: $whiteTwo;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.35);
+  width: 240px;
+  height: 330px;
+  padding: 10px 0;
 
-    &--userName {
-      font-size: 18px;
-    }
-
-    &--job {
-      font-size: 16px;
-    }
+  &__rectangle {
+    grid-column: 1/2;
+    position: relative;
+    margin-top: 13px;
+    width: 5px;
+    height: 42px;
+    background-color: $dirtyBlue;
+  }
+  &__user--userName {
+    margin-top: 10px;
+    margin-bottom: 4px;
+    grid-column: 2/3;
+    text-align: left;
+    font-family: $montserratFont;
+    font-size: 18px;
+    color: $slate;
   }
 
-  // &--bar{}
+  &__user--job {
+    margin-bottom: 10px;
+    grid-column: 2/3;
+    text-align: left;
+    font-family: $montserratFont;
+    font-size: 16px;
+    color: $gunMetal;
+  }
+  &__img {
+    grid-column: 1/4;
+    background-image: url("../images/fondo.jpg");
+    background-position: top center;
+    background-size: cover;
+    background-color: $whiteTwo;
+    width: 240px;
+    height: 200px;
+  }
+  &__bar {
+    grid-column: 2/3;
+    display: flex;
+    list-style-type: none;
+    margin-top: 10px;
+
+    &--icons {
+      display: flex;
+      justify-content: center;
+      background-color: white;
+      width: 32px;
+      height: 32px;
+      border: solid 2px $hospitalGreen;
+      border-radius: 50%;
+      padding: 5px;
+      margin-right: 10px;
+
+      a {
+        color: $darkGreenBlue;
+      }
+    }
+  }
+}
+//
+
+// SECTION 2
+* {
+  border: 0;
+}
+
+.section2-wrapper {
+  padding: 17px 20px 30px 20px;
+}
+
+/* form */
+
+.fieldsetContainer {
+  border-bottom: 1px solid $lightGrey;
+  padding-bottom: 30px;
+}
+
+.titleContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  &__titleItem {
+    display: flex;
+  }
+  &__title {
+    text-transform: uppercase;
+  }
+}
+
+/* Design Fieldset */
+.designContainer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 25px;
+  &__choosePalette {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    &--palette {
+      display: flex;
+      align-items: center;
+      padding-bottom: 20px;
+    }
+  }
+}
+
+.inputRadio {
+  margin-right: 10px;
+}
+
+.color {
+  width: 30px;
+  height: 25px;
+  background-color: darkgreen;
+  border: 1px solid black;
+}
+
+// Palette 1: colors
+.color-darkGreen {
+  background-color: $darkGreenBlue;
+}
+.color-blue {
+  background-color: $dirtyBlue;
+}
+.color-green {
+  background-color: $hospitalGreen;
+}
+
+// Palette 2: colors
+.color-darkRed {
+  background-color: $driedBlood;
+}
+.color-red {
+  background-color: $rustyRed;
+}
+.color-tomato {
+  background-color: $tomato;
+}
+
+// Palette 3: colors
+.color-slate {
+  background-color: $slate;
+}
+.color-orange {
+  background-color: $fadedOrange;
+}
+.color-lightBlue {
+  background-color: $lightGreyBlue;
+}
+
+/* Compleat Fieldset */
+.labelsWrapper {
+  padding-top: 25px;
+  &__jobLabel {
+    margin-bottom: 18px;
+  }
+}
+
+.labelsWrapper__imgLabel--container {
+  padding-top: 7px;
+  display: flex;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.imgLabel-btn {
+  width: 140px;
+  height: 30px;
+  margin-right: 15px;
+  background-color: $colorAddImageButton;
+  color: $whiteTwo;
+}
+
+.imgLabel-div {
+  width: 30px;
+  height: 30px;
+  margin-left: 15px;
+  border: 1px solid $colorInputForm;
+}
+
+.completeFieldset-input {
+  width: 281px;
+  height: 30px;
+  margin-top: 7px;
+  border: 1px solid $colorInputForm;
+}
+
+/* Share Fieldset */
+.btnContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.share-btn {
+  width: 199px;
+  height: 50px;
+  background-color: $shareBtnColor;
+  color: $whiteTwo;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  border-radius: 12px;
+  margin-top: 30px;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+}
+
+.link {
+  text-decoration: none;
+}
+
+.shareSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  border-top: 1px solid $lightGrey;
+  margin-top: 30px;
+  &__paragraph {
+    font-size: 18px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+  }
+  &__link-share {
+    text-align: center;
+    padding-top: 5px;
+    color: $shareLinkColor;
+    font-size: 12px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+  }
+  &__link-shareTwitter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 181px;
+    height: 30px;
+    background-color: $twitterBtnColor;
+    color: $whiteTwo;
+    padding: 3px 9px 6px 10.5px;
+    border-radius: 3px;
+    margin-top: 10px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+  }
+}
+
+/* JS */
+.js-collapsed {
+  display: none;
 }
