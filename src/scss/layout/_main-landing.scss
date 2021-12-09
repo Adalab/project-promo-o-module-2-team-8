@@ -1,18 +1,25 @@
 .mainLanding {
   background-color: $whiteFour;
   width: 100%;
-  height: 85vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 95px 26px 30px;
-
+  @media (min-width: $tablet) {
+    height: 93vh;
+    padding: 300px 175px 60px;
+  }
   &__image {
-    margin-bottom: 50px;
-    width: 350px;
-    height: 100px;
+    margin-bottom: 35px;
+    width: 250px;
+    height: 63px;
+    @media (min-width: $tablet) {
+      width: 420px;
+      height: 105px;
+    }
   }
 
   &__text {
@@ -21,15 +28,24 @@
       color: $colorMainTitle;
       font-size: 19px;
       font-weight: bold;
+      @media (min-width: $tablet) {
+        font-size: 24px;
+      }
     }
     &--paragraph {
       font-family: $fontText;
       color: $darkGreenBlue;
-      margin-bottom: 30px;
+      margin-bottom: 18px;
       width: 264px;
       height: 38px;
       font-size: 13px;
       font-weight: bold;
+      @media (min-width: $tablet) {
+        font-size: 16px;
+        margin-bottom: 30px;
+        width: 330px;
+        height: 50px;
+      }
     }
   }
 
@@ -45,14 +61,24 @@
     font-family: $fontText;
     width: 270px;
     height: 74px;
+    @media (min-width: $tablet) {
+      width: 330px;
+      height: 85px;
+    }
     &--list {
       color: $gunMetal;
       font-size: 13px;
       font-weight: bold;
+      @media (min-width: $tablet) {
+        font-size: 16px;
+      }
     }
     &--icon {
       color: $dullOrange;
-      font-size: 25px;
+      font-size: 20px;
+      @media (min-width: $tablet) {
+        font-size: 30px;
+      }
     }
   }
 
@@ -60,21 +86,19 @@
     background-color: $startButton;
     font-weight: bold;
     height: 42px;
-    width: 120px;
+    width: 125px;
     border-radius: 50px;
     border: none;
     text-transform: uppercase;
-    margin-top: 60px;
+    margin-top: 40px;
     font-family: $fontBtn;
+    @media (min-width: $tablet) {
+      margin-top: 180px;
+      font-size: 15px;
+    }
     &--link {
       color: $whiteFour;
       text-decoration: none;
     }
-  }
-}
-
-@media (min-width: $tablet) {
-  .mainLanding {
-    height: 90vh;
   }
 }
