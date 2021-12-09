@@ -1,3 +1,9 @@
+// .main {
+//   background-color: brown;
+//   display: flex;
+//   align-items: flex-end;
+// }
+
 .section1 {
   background: linear-gradient(#bfcdd0, #dde9ed);
   padding: 40px 0px;
@@ -6,9 +12,15 @@
   align-items: center;
 
   @media (min-width: $tablet) {
-    .section1 {
-      background-color: brown;
-    }
+    position: absolute;
+    right: 40px;
+    width: 40vw;
+    height: 812px;
+    justify-content: center;
+  }
+
+  @media (min-width: $desktop) {
+    width: 50vw;
   }
 
   &__reset {
@@ -32,10 +44,11 @@
   }
 }
 
-.profile {
-  display: flex;
-  flex-direction: column;
-}
+// .profile {
+//   display: flex;
+//   flex-direction: column;
+// }
+
 .card {
   grid-column: 2/3;
   display: grid;
@@ -91,7 +104,7 @@
     &--icons {
       display: flex;
       justify-content: center;
-      background-color: white;
+      background-color: $whiteTwo;
       width: 32px;
       height: 32px;
       border: solid 2px $hospitalGreen;
@@ -114,6 +127,14 @@
 
 .section2-wrapper {
   padding: 17px 20px 30px 20px;
+
+  @media (min-width: $tablet) {
+    width: 55vw;
+  }
+
+  @media (min-width: $desktop) {
+    width: 40vw;
+  }
 }
 
 /* form */
