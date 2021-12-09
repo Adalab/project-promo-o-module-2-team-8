@@ -1,13 +1,15 @@
-.main {
-  padding: 0px;
-}
-
 .section1 {
   background: linear-gradient(#bfcdd0, #dde9ed);
+  padding: 40px 0px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  padding: 40px 0px;
+  align-items: center;
+
+  @media (min-width: $tablet) {
+    .section1 {
+      background-color: brown;
+    }
+  }
 
   &__reset {
     grid-column: 2/3;
@@ -30,12 +32,9 @@
   }
 }
 
-.btn {
+.profile {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  margin-left: 45px;
-  margin-bottom: 20px;
 }
 .card {
   grid-column: 2/3;
