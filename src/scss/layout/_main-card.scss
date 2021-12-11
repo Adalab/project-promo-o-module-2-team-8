@@ -86,7 +86,7 @@
     }
     &__img {
       grid-column: 1/4;
-      background-image: url("../images/fondo.jpg");
+      background-image: url('../images/fondo.jpg');
       background-position: top center;
       background-size: cover;
       background-color: $whiteTwo;
@@ -233,8 +233,6 @@
     }
   }
 
-  
-
   .label {
     width: 100%;
     display: flex;
@@ -263,7 +261,7 @@
     margin-top: 7px;
     border: 1px solid $colorInputForm;
 
-    @media(min-width: $tablet){
+    @media (min-width: $tablet) {
       width: 281px;
     }
   }
@@ -356,5 +354,5 @@
 }
 /* JS */
 .collapsed {
-  display: none;
+  display: none !important;
 }
