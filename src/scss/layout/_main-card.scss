@@ -363,7 +363,9 @@
 .collapsed .shareContainer {
   display: none !important;
 }
-
+.hidden{
+  display: none !important;
+}
 .rotateArrow {
   transform: rotate(180deg);
 }
