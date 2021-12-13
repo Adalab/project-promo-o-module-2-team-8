@@ -4,20 +4,25 @@
 const collapsableTitle = document.querySelector('.js-arrowCollapsable');
 const collapsableTitle2 = document.querySelector('.js-arrowCollapsable2');
 const collapsableTitle3 = document.querySelector('.js-arrowCollapsable3');
+
+const shareBtn= document.querySelector('.js-shareBtn');
+const collapsableShareSection= document.querySelector('.js-shareSection');
+
 // Input variables
 const inputName = document.querySelector('.js-inputName');
 const inputJob = document.querySelector('.js-inputJob');
 const inputEmail = document.querySelector('.js-inputEmail');
-// const inputPhone = document.querySelector('.js-inputPhone');
-// const inputLinkedin = document.querySelector('.js-inputLinkedin');
-// const inputGitHub = document.querySelector('.js-inputGitHub');
+const inputPhone = document.querySelector('.js-inputPhone');
+const inputLinkedin = document.querySelector('.js-inputLinkedin');
+const inputGitHub = document.querySelector('.js-inputGitHub');
+
 // Preview variables
 const cardName = document.querySelector('.js-cardName');
 const cardJob = document.querySelector('.js-cardJob');
 const cardEmail = document.querySelector('.js-cardEmail');
-// const cardPhone = document.querySelector('.js-cardPhone');
-// const cardLinkedin = document.querySelector('.js-cardLinkedin');
-// const cardGitHub = document.querySelector('.js-cardGitHub');
+const cardPhone = document.querySelector('.js-cardPhone');
+const cardLinkedin = document.querySelector('.js-cardLinkedin');
+const cardGitHub = document.querySelector('.js-cardGitHub');
 
 // FUNCTIONS
 // Collapsed containers function
@@ -25,6 +30,15 @@ function handlerClickHeader(event) {
   event.currentTarget.parentNode.parentNode.classList.toggle('collapsed');
   if(event.currentTarget){
     event.currentTarget.classList.toggle('rotateArrow');
+  }
+}
+
+// Collapsed btn
+function handlerClickShareBtn(event){
+  if(event){
+    collapsableShareSection.classList.remove('hidden');
+    shareBtn.classList.remove('shareBtnColor1');
+    shareBtn.classList.add('shareBtnColor2');
   }
 }
 
@@ -39,7 +53,7 @@ const formObject= {
   gitHub:''
 };
 
-function handlerNameInput(){
+function nameInputPreview(){
   formObject.nameSurname= inputName.value;
   const namePreview= formObject.nameSurname;
   if(namePreview===''){
@@ -49,7 +63,7 @@ function handlerNameInput(){
   }
 }
 
-function handlerJobInput(){
+function jobInputPreview(){
   formObject.job= inputJob.value;
   const jobPreview= formObject.job;
   if(jobPreview===''){
@@ -58,9 +72,9 @@ function handlerJobInput(){
     cardJob.innerHTML= jobPreview;
   }
 }
-function handlerEmailInput(){
+function emailInputPreview(){
   formObject.email= inputEmail.value;
-  const emailPreview= formObject.job;
+  const emailPreview= formObject.email;
   if(emailPreview===''){
     cardEmail.href= ``;
   }else{
@@ -68,6 +82,44 @@ function handlerEmailInput(){
   }
 }
 
+function phoneInputPreview(){
+  formObject.phone= inputPhone.value;
+  const phonePreview= formObject.phone;
+  if(phonePreview===''){
+    cardPhone.href= ``;
+  }else{
+    cardPhone.href= `${phonePreview}`;
+  }
+}
+
+function linkedinInputPreview(){
+  formObject.linkedin= inputLinkedin.value;
+  const linkedinPreview= formObject.linkedin;
+  if(linkedinPreview===''){
+    cardLinkedin.href= ``;
+  }else{
+    cardLinkedin.href= `${linkedinPreview}`;
+  }
+}
+
+function gitHubInputPreview(){
+  formObject.gitHub= inputGitHub.value;
+  const gitHubPreview= formObject.gitHub;
+  if(gitHubPreview===''){
+    cardGitHub.href= ``;
+  }else{
+    cardGitHub.href= `${gitHubPreview}`;
+  }
+}
+
+function handlerInputPreview(){
+  nameInputPreview();
+  jobInputPreview();
+  emailInputPreview();
+  phoneInputPreview();
+  linkedinInputPreview();
+  gitHubInputPreview();
+}
 // function handlerUpdatePreview(){
 //   cardName.innerHTML= formObject.nameSurname.value;
 // }
@@ -79,7 +131,12 @@ collapsableTitle.addEventListener('click', handlerClickHeader);
 collapsableTitle2.addEventListener('click', handlerClickHeader);
 collapsableTitle3.addEventListener('click', handlerClickHeader);
 
+shareBtn.addEventListener('click', handlerClickShareBtn);
+
 // Fill function Listeners
-inputName.addEventListener('keyup', handlerNameInput);
-inputJob.addEventListener('keyup', handlerJobInput);
-inputEmail.addEventListener('keyup', handlerEmailInput);
+inputName.addEventListener('keyup', handlerInputPreview);
+inputJob.addEventListener('keyup', handlerInputPreview);
+inputEmail.addEventListener('keyup', handlerInputPreview);
+inputPhone.addEventListener('keyup', handlerInputPreview);
+inputLinkedin.addEventListener('keyup', handlerInputPreview);
+inputGitHub.addEventListener('keyup', handlerInputPreview);

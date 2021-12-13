@@ -20,10 +20,13 @@
 
 @media (min-width: $tablet) {
   .footer {
+    // height: 20vh;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
+    background-color: $whiteTwo;
+    position: relative;
+    bottom: 0;
     &__copy {
       margin: 15px 40px 22px;
     }
