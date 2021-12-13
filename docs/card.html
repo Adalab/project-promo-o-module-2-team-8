@@ -23,15 +23,11 @@
 
     <header class="awesome">
       <div class="awesome__container">
-        <img
-          class="awesome__container--img"
-          src="./assets/images/logo-awesome-profile-cards.svg"
-          title="logo awesome"
-          alt="logo-awesome"
-        />
+        <a class="awesome__container--link" href="./index.html">
+          <img class="awesome__container--img" src="./assets/images/logo-awesome-profile-cards.svg" title="logo awesome"
+            alt="logo-awesome" /></a>
       </div>
     </header>
-
  
 
     <main class="mainCard">
@@ -45,28 +41,28 @@
           <article class="card">
             <div class="card__rectangle"></div>
             <div class="card__user">
-              <h1 class="card__user--userName">Nombre apellido</h1>
-              <h2 class="card__user--job">Front developer</h2>
+              <h1 class="card__user--userName js-cardName">Nombre apellido</h1>
+              <h2 class="card__user--job js-cardJob">Front developer</h2>
             </div>
             <div class="card__img"></div>
             <ul class="card__bar">
               <li class="card__bar--icons">
-                <a href="https://adalab.es/" target="_blank">
+                <a class="js-cardPhone" title="Contáctame" href="#" target="_blank">
                   <i class="fas fa-mobile-alt"></i
                 ></a>
               </li>
               <li class="card__bar--icons">
-                <a href="https://adalab.es/" target="_blank">
+                <a class="js-cardEmail" title="Mándame un correo" href="#" target="_blank">
                   <i class="far fa-envelope"></i
                 ></a>
               </li>
               <li class="card__bar--icons">
-                <a href="https://www.linkedin.com/company/adalab/" target="_blank"
+                <a class="js-cardLinkedin" title="Visita mi Linkedin" href="#" target="_blank"
                   ><i class="fab fa-linkedin-in"></i
                 ></a>
               </li>
               <li class="card__bar--icons">
-                <a href="https://github.com/Adalab" target="_blank"
+                <a class="js-cardGitHub" title="Visita mi GitHub" href="#" target="_blank"
                   ><i class="fab fa-github-alt"></i
                 ></a>
               </li>
@@ -79,16 +75,16 @@
         <form action="" class="section2__form">
           <!-- Design fieldset -->
           <fieldset class="fieldsetContainer section2__form--designFieldset">
-            <!-- FALTA PONER CURSOR POINTER Y TITLE DONDE SE TENGA QUE CLICKAR -->
-            <legend class="titleContainer">
+            <legend class="titleContainer js-collapsable_title">
               <div class="titleContainer__titleItem">
                 <i class="far fa-object-ungroup icon"></i>
-                <h2 class="titleContainer__title">Diseña</h2>
+                <h2 class="titleContainer__titleItem--title">Diseña</h2>
               </div>
-              <i class="fas fa-chevron-up" ></i>
+              <i title="Pulsa para desplegar" class="titleContainer__titleItem--icon fas fa-chevron-up js-arrowCollapsable"></i>
             </legend>
 
-            <div class="designContainer"><!-- <div class="js-collapsed"> -->
+            <div class="designContainer js-collapsable_content">
+              
               <label>Colores</label>
               <nav>
                 <ul class="designContainer__choosePalette">
@@ -137,18 +133,19 @@
             <legend class="titleContainer">
               <div class="titleContainer__titleItem">
                 <i class="far fa-keyboard icon"></i>
-                <h2 class="titleContainer__title">Rellena</h2>
+                <h2 class="titleContainer__titleItem--title">Rellena</h2>
               </div>
-              <i class="fas fa-chevron-up"></i>
+              <i title="Pulsa para desplegar" class="titleContainer__titleItem--icon fas fa-chevron-up js-arrowCollapsable2"></i>
             </legend>
-            <div class="labelsWrapper"> <!-- <div class="js-collapsed"> -->
+            <div class="labelsWrapper">
+              <!-- <div class="js-collapsed"> -->
               <label class="label" for="completeName">
                 Nombre completo
                 <input
-                  class="completeFieldset-input"
+                  class="completeFieldset-input js-inputName"
                   id="completeName"
                   type="text"
-                  name="completeName"
+                  name="name"
                   placeholder="Ej: Sally Jill"
                   pattern="^\b([A-ZÀ-ÿ][-,a-z ']+[ ]*)+$"
                   title="Introduce tu nombre o tu nombre completo"
@@ -158,7 +155,7 @@
               <label class="label labelsWrapper__jobLabel" for="job">
                 Puesto
                 <input
-                  class="completeFieldset-input"
+                  class="completeFieldset-input js-inputJob"
                   id="job"
                   type="text"
                   name="job"
@@ -168,16 +165,16 @@
                 />
               </label>
               <label class="label labelsWrapper__imgLabel" for="img">
-                Imagen de perfil
+                <span class="labelsWrapper__imgLabel--title">Imagen de perfil</span>
                 <div class="labelsWrapper__imgLabel--container">
-                  <button class="imgLabel-btn">Añadir imagen</button>
+                  <button class="imgLabel-btn" name="photo">Añadir imagen</button>
                   <div class="imgLabel-div"></div>
                 </div>
               </label>
               <label class="label" for="emailAddress">
                 Email
                 <input
-                  class="completeFieldset-input"
+                  class="completeFieldset-input js-inputEmail"
                   placeholder="nombre.apellidos@mail.com"
                   id="emailAddress"
                   type="email"
@@ -190,11 +187,11 @@
               <label class="label" for="phoneNumber">
                 Teléfono
                 <input
-                  class="completeFieldset-input contact__form--item phoneNumber"
+                  class="completeFieldset-input contact__form--item phoneNumber js-inputPhone"
                   placeholder="Ej: 555-55-55-55"
                   id="phoneNumber"
                   type="tel"
-                  name="phoneNumber"
+                  name="phone"
                   pattern="^[0-9]{9}$"
                   title="Por favor, introduce tu número de teléfono"
                 />
@@ -202,7 +199,7 @@
               <label class="label" for="linkedin">
                 Linkedin
                 <input
-                  class="completeFieldset-input"
+                  class="completeFieldset-input js-inputLinkedin"
                   placeholder="Ej: linkedin.com/in/sally.hill"
                   id="linkedin"
                   type="text"
@@ -214,7 +211,7 @@
               <label class="label" for="gitHub">
                 GitHub
                 <input
-                  class="completeFieldset-input"
+                  class="completeFieldset-input js-inputGitHub"
                   placeholder="Ej: @sally-hill"
                   id="gitHub"
                   type="text"
@@ -231,18 +228,19 @@
             <legend class="titleContainer">
               <div class="titleContainer__titleItem">
                 <i class="fas fa-share-alt icon"></i>
-                <h2 class="titleContainer__title">Comparte</h2>
+                <h2 class="titleContainer__titleItem--title">Comparte</h2>
               </div>
-              <i class="fas fa-chevron-up"></i>
+              <i title="Pulsa para desplegar" class="titleContainer__titleItem--icon fas fa-chevron-up js-arrowCollapsable3"></i>
             </legend>
-            <div> <!-- <div class="js-collapsed"> -->
+            <div class="shareContainer">
+              <!-- <div class="js-collapsed"> -->
               <div class="btnContainer">
-                <button class="share-btn">
-                  <i class="fas fa-address-card"></i>
-                  Crear tarjeta
+                <button class="btnContainer__share-btn js-shareBtn shareBtnColor1">
+                  <i class="btnContainer__share-btn--icon far fa-address-card"></i>
+                  <span class="btnContainer__share-btn--text" title="Crear la tarjeta">Crear tarjeta</span>
                 </button>
               </div>
-              <section class="shareSection">
+              <section class="shareSection js-shareSection hidden">
                 <p class="shareSection__paragraph">La tarjeta ha sido creada:</p>
                 <a
                   class="link shareSection__link-share"
@@ -254,7 +252,7 @@
                   class="link shareSection__link-shareTwitter"
                   title="Comparte en twitter la tarjeta"
                   href="#"
-                  ><i class="fa-brands fa-twitter"></i> Compartir en twitter</a
+                  ><i class="fab fa-twitter"></i> Compartir en twitter</a
                 >
               </section>
             </div>
