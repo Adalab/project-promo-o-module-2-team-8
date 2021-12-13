@@ -83,12 +83,12 @@ function emailInputPreview(){
 }
 
 function phoneInputPreview(){
-  formObject.phone= inputPhone.value;
+  formObject.phone= parseInt(inputPhone.value);
   const phonePreview= formObject.phone;
   if(phonePreview===''){
     cardPhone.href= ``;
   }else{
-    cardPhone.href= `${phonePreview}`;
+    cardPhone.href= `tel: ${phonePreview}`;
   }
 }
 
@@ -98,7 +98,7 @@ function linkedinInputPreview(){
   if(linkedinPreview===''){
     cardLinkedin.href= ``;
   }else{
-    cardLinkedin.href= `${linkedinPreview}`;
+    cardLinkedin.href= `https://www.${linkedinPreview}`;
   }
 }
 
@@ -108,7 +108,7 @@ function gitHubInputPreview(){
   if(gitHubPreview===''){
     cardGitHub.href= ``;
   }else{
-    cardGitHub.href= `${gitHubPreview}`;
+    cardGitHub.href= `https://github.com/${gitHubPreview}`;
   }
 }
 
