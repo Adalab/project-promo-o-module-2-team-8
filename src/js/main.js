@@ -5,8 +5,11 @@ const collapsableTitle = document.querySelector('.js-arrowCollapsable');
 const collapsableTitle2 = document.querySelector('.js-arrowCollapsable2');
 const collapsableTitle3 = document.querySelector('.js-arrowCollapsable3');
 
-const shareBtn= document.querySelector('.js-shareBtn');
-const collapsableShareSection= document.querySelector('.js-shareSection');
+const shareBtn = document.querySelector('.js-shareBtn');
+const collapsableShareSection = document.querySelector('.js-shareSection');
+
+//botón reset
+const resetBtn = document.querySelector('.js-reset');
 
 // Input variables
 const inputName = document.querySelector('.js-inputName');
@@ -28,13 +31,13 @@ const cardGitHub = document.querySelector('.js-cardGitHub');
 // Collapsed containers function
 function handlerClickHeader(event) {
   event.currentTarget.parentNode.parentNode.classList.toggle('collapsed');
-  if(event.currentTarget){
+  if (event.currentTarget) {
     event.currentTarget.classList.toggle('rotateArrow');
   }
 }
 
 // Collapsed btn
-function handlerClickShareBtn(){
+function handlerClickShareBtn() {
   collapsableShareSection.classList.remove('hidden');
   shareBtn.classList.remove('shareBtnColor1');
   shareBtn.classList.add('shareBtnColor2');
@@ -42,75 +45,75 @@ function handlerClickShareBtn(){
 
 // Form objet
 
-const formObject= {
+let formObject = {
   name: '',
   job: '',
-  phone:'',
-  email:'',
-  linkedin:'',
-  gitHub:''
+  phone: '',
+  email: '',
+  linkedin: '',
+  gitHub: '',
 };
 
-function nameInputPreview(){
-  formObject.name= inputName.value;
-  const namePreview= formObject.name;
-  if(namePreview===''){
-    cardName.innerHTML='Nombre Apellido';
-  }else{
-    cardName.innerHTML= namePreview;
+function nameInputPreview() {
+  formObject.name = inputName.value;
+  const namePreview = formObject.name;
+  if (namePreview === '') {
+    cardName.innerHTML = 'Nombre Apellido';
+  } else {
+    cardName.innerHTML = namePreview;
   }
 }
 
-function jobInputPreview(){
-  formObject.job= inputJob.value;
-  const jobPreview= formObject.job;
-  if(jobPreview===''){
-    cardJob.innerHTML='Front developer';
-  }else{
-    cardJob.innerHTML= jobPreview;
+function jobInputPreview() {
+  formObject.job = inputJob.value;
+  const jobPreview = formObject.job;
+  if (jobPreview === '') {
+    cardJob.innerHTML = 'Front developer';
+  } else {
+    cardJob.innerHTML = jobPreview;
   }
 }
-function emailInputPreview(){
-  formObject.email= inputEmail.value;
-  const emailPreview= formObject.email;
-  if(emailPreview===''){
-    cardEmail.href= ``;
-  }else{
-    cardEmail.href= `mailto:${emailPreview}`;
-  }
-}
-
-function phoneInputPreview(){
-  formObject.phone= parseInt(inputPhone.value);
-  const phonePreview= formObject.phone;
-  if(phonePreview===''){
-    cardPhone.href= ``;
-  }else{
-    cardPhone.href= `tel: ${phonePreview}`;
+function emailInputPreview() {
+  formObject.email = inputEmail.value;
+  const emailPreview = formObject.email;
+  if (emailPreview === '') {
+    cardEmail.href = ``;
+  } else {
+    cardEmail.href = `mailto:${emailPreview}`;
   }
 }
 
-function linkedinInputPreview(){
-  formObject.linkedin= inputLinkedin.value;
-  const linkedinPreview= formObject.linkedin;
-  if(linkedinPreview===''){
-    cardLinkedin.href= ``;
-  }else{
-    cardLinkedin.href= `https://www.${linkedinPreview}`;
+function phoneInputPreview() {
+  formObject.phone = parseInt(inputPhone.value);
+  const phonePreview = formObject.phone;
+  if (phonePreview === '') {
+    cardPhone.href = ``;
+  } else {
+    cardPhone.href = `tel: ${phonePreview}`;
   }
 }
 
-function gitHubInputPreview(){
-  formObject.gitHub= inputGitHub.value;
-  const gitHubPreview= formObject.gitHub;
-  if(gitHubPreview===''){
-    cardGitHub.href= ``;
-  }else{
-    cardGitHub.href= `https://github.com/${gitHubPreview}`;
+function linkedinInputPreview() {
+  formObject.linkedin = inputLinkedin.value;
+  const linkedinPreview = formObject.linkedin;
+  if (linkedinPreview === '') {
+    cardLinkedin.href = ``;
+  } else {
+    cardLinkedin.href = `https://www.${linkedinPreview}`;
   }
 }
 
-function handlerInputPreview(){
+function gitHubInputPreview() {
+  formObject.gitHub = inputGitHub.value;
+  const gitHubPreview = formObject.gitHub;
+  if (gitHubPreview === '') {
+    cardGitHub.href = ``;
+  } else {
+    cardGitHub.href = `https://github.com/${gitHubPreview}`;
+  }
+}
+
+function handlerInputPreview() {
   nameInputPreview();
   jobInputPreview();
   emailInputPreview();
@@ -118,10 +121,31 @@ function handlerInputPreview(){
   linkedinInputPreview();
   gitHubInputPreview();
 }
-// function handlerUpdatePreview(){
-//   cardName.innerHTML= formObject.name.value;
-// }
 
+//función botón reset
+
+function handlerClickResetBtn() {
+  handlerInputPreview();
+  formObject.name = '';
+  inputName.value = formObject.name;
+
+  formObject.job = '';
+  inputJob.value = formObject.job;
+
+  formObject.phone = '';
+  inputPhone.value = formObject.phone;
+
+  formObject.email = '';
+  inputEmail.value = formObject.email;
+
+  formObject.linkedin = '';
+  inputLinkedin.value = formObject.linkedin;
+
+  formObject.gitHub = '';
+  inputGitHub.value = formObject.gitHub;
+
+  //coger valores
+}
 
 // LISTENERS:
 // Collapsed function Listeners
@@ -131,6 +155,10 @@ collapsableTitle3.addEventListener('click', handlerClickHeader);
 
 shareBtn.addEventListener('click', handlerClickShareBtn);
 
+//Reset Btn Listener
+
+resetBtn.addEventListener('click', handlerClickResetBtn);
+
 // Fill function Listeners
 inputName.addEventListener('keyup', handlerInputPreview);
 inputJob.addEventListener('keyup', handlerInputPreview);
@@ -138,3 +166,7 @@ inputEmail.addEventListener('keyup', handlerInputPreview);
 inputPhone.addEventListener('keyup', handlerInputPreview);
 inputLinkedin.addEventListener('keyup', handlerInputPreview);
 inputGitHub.addEventListener('keyup', handlerInputPreview);
+
+// function handlerUpdatePreview(){
+//   cardName.innerHTML= formObject.name.value;
+// }
