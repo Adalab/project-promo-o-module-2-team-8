@@ -279,6 +279,7 @@
     border: 1px solid $colorInputForm;
     &::placeholder{
       color: $colorPlaceholders;
+      padding: 3px 0 7px 9px;
     }
   }
 

@@ -34,18 +34,16 @@ function handlerClickHeader(event) {
 }
 
 // Collapsed btn
-function handlerClickShareBtn(event){
-  if(event){
-    collapsableShareSection.classList.remove('hidden');
-    shareBtn.classList.remove('shareBtnColor1');
-    shareBtn.classList.add('shareBtnColor2');
-  }
+function handlerClickShareBtn(){
+  collapsableShareSection.classList.remove('hidden');
+  shareBtn.classList.remove('shareBtnColor1');
+  shareBtn.classList.add('shareBtnColor2');
 }
 
 // Form objet
 
 const formObject= {
-  nameSurname: '',
+  name: '',
   job: '',
   phone:'',
   email:'',
@@ -54,8 +52,8 @@ const formObject= {
 };
 
 function nameInputPreview(){
-  formObject.nameSurname= inputName.value;
-  const namePreview= formObject.nameSurname;
+  formObject.name= inputName.value;
+  const namePreview= formObject.name;
   if(namePreview===''){
     cardName.innerHTML='Nombre Apellido';
   }else{
@@ -121,7 +119,7 @@ function handlerInputPreview(){
   gitHubInputPreview();
 }
 // function handlerUpdatePreview(){
-//   cardName.innerHTML= formObject.nameSurname.value;
+//   cardName.innerHTML= formObject.name.value;
 // }
 
 
