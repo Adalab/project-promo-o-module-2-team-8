@@ -42,6 +42,7 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
+      cursor: pointer;
 
       &--text {
         text-transform: uppercase;
@@ -294,6 +295,10 @@
     margin-right: 15px;
     background-color: $colorAddImageButton;
     color: $whiteTwo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
   }
 
   .imgLabel-div {
@@ -301,6 +306,8 @@
     height: 30px;
     margin-left: 15px;
     border: 1px solid $colorInputForm;
+    background-size: contain;
+    background-position: center center;
   }
 
   .completeFieldset-input {
