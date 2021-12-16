@@ -25,9 +25,11 @@ const cardLinkedin = document.querySelector('.js-cardLinkedin');
 const cardGitHub = document.querySelector('.js-cardGitHub');
 
 // Palettes
-const palettesInput= document.querySelectorAll('.js-palette');
+const choiceColours = document.querySelector('.js-choiceColours');
 
-const rectangle= document.querySelector('.js-rectangle');
+const palettesRadio = document.querySelectorAll('.js-palette');
+
+
 
 
 // FUNCTIONS
@@ -51,10 +53,29 @@ function handlerClickShareBtn(event){
 
 
 // Function palette
-let arrPalette= palettesInput.length;
-for(const eachPalette of arrPalette){
-  eachPalette.addEventListener('click', handleClickPalette);
-  
+
+function paintChoice2(){
+  for(const eachPalette of choiceColours){
+    eachPalette.classList.remove('colorDefault');
+    eachPalette.classList.remove('colorChoice3');
+    eachPalette.classList.add('colorChoice2');
+  }
+}
+
+function paintChoice3(){
+  for(const eachPalette of choiceColours){
+    eachPalette.classList.remove('colorDefault');
+    eachPalette.classList.remove('colorChoice2');
+    eachPalette.classList.add('colorChoice3');
+  }
+}
+
+function paintDefault(){
+  for(const eachPalette of choiceColours){
+    eachPalette.classList.remove('colorChoice2');
+    eachPalette.classList.remove('colorChoice3');
+    eachPalette.classList.add('colorDefault');
+  }
 }
 
 
@@ -141,8 +162,6 @@ function handlerInputPreview(){
 //   cardName.innerHTML= formObject.nameSurname.value;
 // }
 
-<<<<<<< HEAD
-=======
 //función botón reset
 
 function handlerClickResetBtn() {
@@ -167,7 +186,6 @@ function handlerClickResetBtn() {
 
   //coger valores
 }
->>>>>>> db27b95547f61b9d710b4872dae3c02dd5c083b6
 
 // LISTENERS:
 // Collapsed function Listeners

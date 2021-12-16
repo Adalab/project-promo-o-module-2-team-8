@@ -118,8 +118,39 @@
       }
     }
   }
-  //
 
+  // Change color name title js
+  .colorDefault .colorNameDefault {
+    background-color: $darkGreenBlue;
+  }
+  .colorChoice2 .colorNameChoice2 {
+    background-color: $driedBlood;
+  }
+  .colorChoice3 .colorNameChoice3 {
+    background-color: $slate;
+  }
+
+  //Color palettes icons js
+  .colorDefault .colorIconsDefault {
+    border: solid 2px $hospitalGreen;
+  }
+  .colorChoice2 .colorIconsChoice2 {
+    border: solid 2px $tomato;
+  }
+  .colorChoice3 .colorIconsChoice3 {
+    border: solid 2px $lightGreyBlue;
+  }
+
+  // Change color rectangle js
+  .colorDefault .colorRectangleDefault {
+    background-color: $dirtyBlue;
+  }
+  .colorChoice2 .colorRectangleChoice2 {
+    background-color: $rustyRed;
+  }
+  .colorChoice3 .colorRectangleChoice3 {
+    background-color: $fadedOrange;
+  }
   // SECTION 2
 
   .section2-wrapper {
@@ -277,7 +308,7 @@
     height: 30px;
     margin-top: 7px;
     border: 1px solid $colorInputForm;
-    &::placeholder{
+    &::placeholder {
       color: $colorPlaceholders;
       padding: 3px 0 7px 9px;
     }
@@ -295,7 +326,7 @@
       align-items: center;
       width: 199px;
       height: 50px;
-      
+
       color: $whiteTwo;
       text-transform: uppercase;
       font-size: 18px;
