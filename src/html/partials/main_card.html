@@ -9,26 +9,45 @@
       <article class="card">
         <div class="card__rectangle js-choiceColours"></div>
         <div class="card__user">
-          <h1 class="card__user--userName js-cardName js-choiceColours">Nombre apellido</h1>
+          <h1 class="card__user--userName js-cardName js-choiceColours">
+            Nombre apellido
+          </h1>
           <h2 class="card__user--job js-cardJob">Front developer</h2>
         </div>
-        <div class="card__img"></div>
+        <div class="card__img js__profile-image"></div>
         <ul class="card__bar">
           <li class="card__bar--icons">
             <a class="js-cardPhone" title="Contáctame" href="#" target="_blank">
-              <i class="fas fa-mobile-alt"></i></a>
+              <i class="fas fa-mobile-alt"></i
+            ></a>
           </li>
           <li class="card__bar--icons">
-            <a class="js-cardEmail" title="Mándame un correo" href="#" target="_blank">
-              <i class="far fa-envelope"></i></a>
+            <a
+              class="js-cardEmail"
+              title="Mándame un correo"
+              href="#"
+              target="_blank"
+            >
+              <i class="far fa-envelope"></i
+            ></a>
           </li>
           <li class="card__bar--icons">
-            <a class="js-cardLinkedin" title="Visita mi Linkedin" href="#" target="_blank"><i
-                class="fab fa-linkedin-in"></i></a>
+            <a
+              class="js-cardLinkedin"
+              title="Visita mi Linkedin"
+              href="#"
+              target="_blank"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
           </li>
           <li class="card__bar--icons">
-            <a class="js-cardGitHub" title="Visita mi GitHub" href="#" target="_blank"><i
-                class="fab fa-github-alt"></i></a>
+            <a
+              class="js-cardGitHub"
+              title="Visita mi GitHub"
+              href="#"
+              target="_blank"
+              ><i class="fab fa-github-alt"></i
+            ></a>
           </li>
         </ul>
       </article>
@@ -44,12 +63,15 @@
             <i class="far fa-object-ungroup icon"></i>
             <h2 class="titleContainer__titleItem--title">Diseña</h2>
           </div>
-          <i title="Pulsa para desplegar" class="
+          <i
+            title="Pulsa para desplegar"
+            class="
               titleContainer__titleItem--icon
               fas
               fa-chevron-up
               js-arrowCollapsable
-            "></i>
+            "
+          ></i>
         </legend>
 
         <div class="designContainer js-collapsable_content">
@@ -57,21 +79,40 @@
           <nav>
             <ul class="designContainer__choosePalette">
               <li class="designContainer__choosePalette--palette">
-                <input class="inputRadio js-palette" value="1" id="1" type="radio" name="palette" checked />
+                <input
+                  class="inputRadio js-palette"
+                  value="1"
+                  id="1"
+                  type="radio"
+                  name="palette"
+                  checked
+                />
                 <div class="color color-darkGreen"></div>
                 <div class="color color-blue"></div>
                 <div class="color color-green"></div>
               </li>
 
               <li class="designContainer__choosePalette--palette">
-                <input class="inputRadio js-palette" value="2" id="2" type="radio" name="palette" />
+                <input
+                  class="inputRadio js-palette"
+                  value="2"
+                  id="2"
+                  type="radio"
+                  name="palette"
+                />
 
                 <div class="color color-darkRed"></div>
                 <div class="color color-red"></div>
                 <div class="color color-tomato"></div>
               </li>
               <li class="designContainer__choosePalette--palette">
-                <input class="inputRadio js-palette" value="3" id="3" type="radio" name="palette" />
+                <input
+                  class="inputRadio js-palette"
+                  value="3"
+                  id="3"
+                  type="radio"
+                  name="palette"
+                />
                 <div class="color color-slate"></div>
                 <div class="color color-orange"></div>
                 <div class="color color-lightBlue"></div>
@@ -88,59 +129,114 @@
             <i class="far fa-keyboard icon"></i>
             <h2 class="titleContainer__titleItem--title">Rellena</h2>
           </div>
-          <i title="Pulsa para desplegar" class="
+          <i
+            title="Pulsa para desplegar"
+            class="
               titleContainer__titleItem--icon
               fas
               fa-chevron-up
               js-arrowCollapsable2
-            "></i>
+            "
+          ></i>
         </legend>
         <div class="labelsWrapper">
           <!-- <div class="js-collapsed"> -->
           <label class="label" for="completeName">
             Nombre completo
-            <input class="completeFieldset-input js-inputName" id="completeName" type="text" name="name"
-              placeholder="Ej: Sally Jill" pattern="^\b([A-ZÀ-ÿ][-,a-z ']+[ ]*)+$"
-              title="Introduce tu nombre o tu nombre completo" required />
+            <input
+              class="completeFieldset-input js-inputName"
+              id="completeName"
+              type="text"
+              name="name"
+              placeholder="Ej: Sally Jill"
+              pattern="^\b([A-ZÀ-ÿ][-,a-z ']+[ ]*)+$"
+              title="Introduce tu nombre o tu nombre completo"
+              required
+            />
           </label>
           <label class="label labelsWrapper__jobLabel" for="job">
             Puesto
-            <input class="completeFieldset-input js-inputJob" id="job" type="text" name="job"
-              placeholder="Ej: Front-end unicorn" title="Introduce el puesto que desempeñas" required />
+            <input
+              class="completeFieldset-input js-inputJob"
+              id="job"
+              type="text"
+              name="job"
+              placeholder="Ej: Front-end unicorn"
+              title="Introduce el puesto que desempeñas"
+              required
+            />
           </label>
           <label class="label labelsWrapper__imgLabel" for="img">
             <span class="labelsWrapper__imgLabel--title">Imagen de perfil</span>
             <div class="labelsWrapper__imgLabel--container">
-              <button class="imgLabel-btn" name="photo">Añadir imagen</button>
-              <div class="imgLabel-div"></div>
+              <label
+                for="photo"
+                class="imgLabel-btn js__profile-trigger"
+                name="photo"
+                >Añadir imagen</label
+              >
+              <input
+                class="js__profile-upload-btn"
+                type="file"
+                name="photo"
+                id="photo"
+              />
+              <div class="imgLabel-div js__profile-preview"></div>
             </div>
           </label>
           <label class="label" for="emailAddress">
             Email
-            <input class="completeFieldset-input js-inputEmail" placeholder="nombre.apellidos@mail.com"
-              id="emailAddress" type="email" name="email" title="Introduce un email válido"
+            <input
+              class="completeFieldset-input js-inputEmail"
+              placeholder="nombre.apellidos@mail.com"
+              id="emailAddress"
+              type="email"
+              name="email"
+              title="Introduce un email válido"
               pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?.)+[.][a-z0-9](?:[a-z0-9-]*[a-z0-9])?$"
-              required />
+              required
+            />
           </label>
           <label class="label" for="phoneNumber">
             Teléfono
-            <input class="
+            <input
+              class="
                 completeFieldset-input
                 contact__form--item
                 phoneNumber
                 js-inputPhone
-              " placeholder="Ej: 555-55-55-55" id="phoneNumber" type="tel" name="phone" pattern="^[0-9]{9}$"
-              title="Por favor, introduce tu número de teléfono" />
+              "
+              placeholder="Ej: 555-55-55-55"
+              id="phoneNumber"
+              type="tel"
+              name="phone"
+              pattern="^[0-9]{9}$"
+              title="Por favor, introduce tu número de teléfono"
+            />
           </label>
           <label class="label" for="linkedin">
             Linkedin
-            <input class="completeFieldset-input js-inputLinkedin" placeholder="Ej: linkedin.com/in/sally.hill"
-              id="linkedin" type="text" name="linkedin" title="Introduce tu linkedin" required />
+            <input
+              class="completeFieldset-input js-inputLinkedin"
+              placeholder="Ej: linkedin.com/in/sally.hill"
+              id="linkedin"
+              type="text"
+              name="linkedin"
+              title="Introduce tu linkedin"
+              required
+            />
           </label>
           <label class="label" for="gitHub">
             GitHub
-            <input class="completeFieldset-input js-inputGitHub" placeholder="Ej: @sally-hill" id="gitHub" type="text"
-              name="gitHub" title="Introduce tu GitHub" required />
+            <input
+              class="completeFieldset-input js-inputGitHub"
+              placeholder="Ej: @sally-hill"
+              id="gitHub"
+              type="text"
+              name="gitHub"
+              title="Introduce tu GitHub"
+              required
+            />
           </label>
         </div>
       </fieldset>
@@ -152,27 +248,42 @@
             <i class="fas fa-share-alt icon"></i>
             <h2 class="titleContainer__titleItem--title">Comparte</h2>
           </div>
-          <i title="Pulsa para desplegar" class="
+          <i
+            title="Pulsa para desplegar"
+            class="
               titleContainer__titleItem--icon
               fas
               fa-chevron-up
               js-arrowCollapsable3
-            "></i>
+            "
+          ></i>
         </legend>
         <div class="shareContainer">
           <!-- <div class="js-collapsed"> -->
           <div class="btnContainer">
             <button class="btnContainer__share-btn js-shareBtn shareBtnColor1">
               <i class="btnContainer__share-btn--icon far fa-address-card"></i>
-              <span class="btnContainer__share-btn--text" title="Crear la tarjeta">Crear tarjeta</span>
+              <span
+                class="btnContainer__share-btn--text"
+                title="Crear la tarjeta"
+                >Crear tarjeta</span
+              >
             </button>
           </div>
           <section class="shareSection js-shareSection hidden">
             <p class="shareSection__paragraph">La tarjeta ha sido creada:</p>
-            <a class="link shareSection__link-share" title="Ir a la tarjeta"
-              href="#">https://awesome-profile-card.com?id=A456DF0001</a>
-            <a class="link shareSection__link-shareTwitter" title="Comparte en twitter la tarjeta" href="#"><i
-                class="fab fa-twitter"></i> Compartir en twitter</a>
+            <a
+              class="link shareSection__link-share"
+              title="Ir a la tarjeta"
+              href="#"
+              >https://awesome-profile-card.com?id=A456DF0001</a
+            >
+            <a
+              class="link shareSection__link-shareTwitter"
+              title="Comparte en twitter la tarjeta"
+              href="#"
+              ><i class="fab fa-twitter"></i> Compartir en twitter</a
+            >
           </section>
         </div>
       </fieldset>

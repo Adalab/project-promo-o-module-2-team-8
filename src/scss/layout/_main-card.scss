@@ -88,7 +88,7 @@
     }
     &__img {
       grid-column: 1/4;
-      background-image: url("../images/fondo.jpg");
+      background-image: url('../images/fondo.jpg');
       background-position: top center;
       background-size: cover;
       background-color: $whiteTwo;
@@ -421,4 +421,9 @@
 
 .shareBtnColor2 {
   background-color: $shareBtnColor;
+}
+
+//input seleccionar imagen
+#photo {
+  display: none;
 }
