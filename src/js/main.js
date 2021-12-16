@@ -142,7 +142,6 @@ function handlerInputPreview() {
 //función botón reset
 
 function handlerClickResetBtn() {
-  handlerInputPreview();
   formObject.name = '';
   inputName.value = formObject.name;
 
@@ -160,6 +159,7 @@ function handlerClickResetBtn() {
 
   formObject.gitHub = '';
   inputGitHub.value = formObject.gitHub;
+  handlerInputPreview();
 
   //coger valores
 }
