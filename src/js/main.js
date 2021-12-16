@@ -8,6 +8,9 @@ const collapsableTitle3 = document.querySelector('.js-arrowCollapsable3');
 const shareBtn= document.querySelector('.js-shareBtn');
 const collapsableShareSection= document.querySelector('.js-shareSection');
 
+//botón reset
+const resetBtn = document.querySelector('.js-reset');
+
 // Input variables
 const inputName = document.querySelector('.js-inputName');
 const inputJob = document.querySelector('.js-inputJob');
@@ -51,8 +54,18 @@ function handlerClickShareBtn(event){
 }
 
 
-
 // Function palette
+
+function paintCardPreview(event){
+  const paletteChecked= parseInt(event.currentTarget.id);
+  if(paletteChecked=== 1){
+    paintDefault();
+  }else if(paletteChecked===2){
+    paintChoice2();
+  }else{
+    paintChoice3();
+  }
+}
 
 function paintChoice2(){
   for(const eachPalette of choiceColours){
@@ -78,11 +91,13 @@ function paintDefault(){
   }
 }
 
-
+for (const eachRadio of palettesRadio) {
+  eachRadio.addEventListener('click', paintCardPreview);
+}
 
 // Form objet
 
-const formObject= {
+let formObject= {
   nameSurname: '',
   job: '',
   phone:'',
@@ -158,9 +173,7 @@ function handlerInputPreview(){
   linkedinInputPreview();
   gitHubInputPreview();
 }
-// function handlerUpdatePreview(){
-//   cardName.innerHTML= formObject.nameSurname.value;
-// }
+
 
 //función botón reset
 
@@ -195,6 +208,9 @@ collapsableTitle3.addEventListener('click', handlerClickHeader);
 
 shareBtn.addEventListener('click', handlerClickShareBtn);
 
+//Reset Btn Listener
+resetBtn.addEventListener('click', handlerClickResetBtn);
+
 // Fill function Listeners
 inputName.addEventListener('keyup', handlerInputPreview);
 inputJob.addEventListener('keyup', handlerInputPreview);
@@ -202,3 +218,8 @@ inputEmail.addEventListener('keyup', handlerInputPreview);
 inputPhone.addEventListener('keyup', handlerInputPreview);
 inputLinkedin.addEventListener('keyup', handlerInputPreview);
 inputGitHub.addEventListener('keyup', handlerInputPreview);
+
+
+// function handlerUpdatePreview(){
+//   cardName.innerHTML= formObject.nameSurname.value;
+// }
