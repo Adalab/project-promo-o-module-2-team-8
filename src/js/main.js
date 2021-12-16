@@ -24,6 +24,12 @@ const cardPhone = document.querySelector('.js-cardPhone');
 const cardLinkedin = document.querySelector('.js-cardLinkedin');
 const cardGitHub = document.querySelector('.js-cardGitHub');
 
+// Palettes
+const palettesInput= document.querySelectorAll('.js-palette');
+
+const rectangle= document.querySelector('.js-rectangle');
+
+
 // FUNCTIONS
 // Collapsed containers function
 function handlerClickHeader(event) {
@@ -41,6 +47,17 @@ function handlerClickShareBtn(event){
     shareBtn.classList.add('shareBtnColor2');
   }
 }
+
+
+
+// Function palette
+let arrPalette= palettesInput.length;
+for(const eachPalette of arrPalette){
+  eachPalette.addEventListener('click', handleClickPalette);
+  
+}
+
+
 
 // Form objet
 
@@ -124,6 +141,33 @@ function handlerInputPreview(){
 //   cardName.innerHTML= formObject.nameSurname.value;
 // }
 
+<<<<<<< HEAD
+=======
+//función botón reset
+
+function handlerClickResetBtn() {
+  formObject.name = '';
+  inputName.value = formObject.name;
+
+  formObject.job = '';
+  inputJob.value = formObject.job;
+
+  formObject.phone = '';
+  inputPhone.value = formObject.phone;
+
+  formObject.email = '';
+  inputEmail.value = formObject.email;
+
+  formObject.linkedin = '';
+  inputLinkedin.value = formObject.linkedin;
+
+  formObject.gitHub = '';
+  inputGitHub.value = formObject.gitHub;
+  handlerInputPreview();
+
+  //coger valores
+}
+>>>>>>> db27b95547f61b9d710b4872dae3c02dd5c083b6
 
 // LISTENERS:
 // Collapsed function Listeners
