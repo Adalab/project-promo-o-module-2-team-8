@@ -12,6 +12,7 @@ const collapsableShareSection= document.querySelector('.js-shareSection');
 const resetBtn = document.querySelector('.js-reset');
 
 // Input variables
+// const inputPalette = document.querySelector('.js-inputGitHub');
 const inputName = document.querySelector('.js-inputName');
 const inputJob = document.querySelector('.js-inputJob');
 const inputEmail = document.querySelector('.js-inputEmail');
@@ -28,7 +29,7 @@ const cardLinkedin = document.querySelector('.js-cardLinkedin');
 const cardGitHub = document.querySelector('.js-cardGitHub');
 
 // Palettes
-const choiceColours = document.querySelector('.js-choiceColours');
+const choiceColours = document.querySelectorAll('.js-choiceColours');
 
 const palettesRadio = document.querySelectorAll('.js-palette');
 
@@ -98,7 +99,8 @@ for (const eachRadio of palettesRadio) {
 // Form objet
 
 let formObject= {
-  nameSurname: '',
+  palette: '1',
+  name: '',
   job: '',
   phone:'',
   email:'',
@@ -107,8 +109,8 @@ let formObject= {
 };
 
 function nameInputPreview(){
-  formObject.nameSurname= inputName.value;
-  const namePreview= formObject.nameSurname;
+  formObject.name= inputName.value;
+  const namePreview= formObject.name;
   if(namePreview===''){
     cardName.innerHTML='Nombre Apellido';
   }else{
@@ -178,6 +180,9 @@ function handlerInputPreview(){
 //función botón reset
 
 function handlerClickResetBtn() {
+  // formObject.palette= '';
+  // inputName.value = formObject.palette;
+
   formObject.name = '';
   inputName.value = formObject.name;
 
