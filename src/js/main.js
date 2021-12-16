@@ -27,6 +27,12 @@ const cardPhone = document.querySelector('.js-cardPhone');
 const cardLinkedin = document.querySelector('.js-cardLinkedin');
 const cardGitHub = document.querySelector('.js-cardGitHub');
 
+// Palettes
+const palettesInput= document.querySelectorAll('.js-palette');
+
+const rectangle= document.querySelector('.js-rectangle');
+
+
 // FUNCTIONS
 // Collapsed containers function
 function handlerClickHeader(event) {
@@ -42,6 +48,17 @@ function handlerClickShareBtn() {
   shareBtn.classList.remove('shareBtnColor1');
   shareBtn.classList.add('shareBtnColor2');
 }
+
+
+
+// Function palette
+let arrPalette= palettesInput.length;
+for(const eachPalette of arrPalette){
+  eachPalette.addEventListener('click', handleClickPalette);
+  
+}
+
+
 
 // Form objet
 
