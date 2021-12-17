@@ -306,7 +306,8 @@
     height: 30px;
     margin-left: 15px;
     border: 1px solid $colorInputForm;
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: center center;
   }
 
