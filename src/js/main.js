@@ -71,11 +71,11 @@ function paintCardPreview(event){
 
 function paintChoice2(){
   for(const eachPalette of choiceColours){
-    if(eachPalette === cardName){ 
+    if(eachPalette === cardName){
       eachPalette.classList.remove('colorNameDefault');
       eachPalette.classList.remove('colorNameChoice3');
       eachPalette.classList.add('colorNameChoice2');
-    } else if (eachPalette === rectangle){ 
+    } else if (eachPalette === rectangle){
       eachPalette.classList.remove('colorRectangleDefault');
       eachPalette.classList.remove('colorRectangleChoice3');
       eachPalette.classList.add('colorRectangleChoice2');
@@ -84,45 +84,45 @@ function paintChoice2(){
       eachPalette.classList.remove('colorIconsChoice3');
       eachPalette.classList.add('colorIconsChoice2');
     }
-   }
+  }
 }
 
 function paintChoice3(){
-  for(const eachPalette of choiceColours){   
-    if(eachPalette === cardName){ 
-    eachPalette.classList.remove('colorNameDefault');
-    eachPalette.classList.remove('colorNameChoice2');
-    eachPalette.classList.add('colorNameChoice3');
+  for(const eachPalette of choiceColours){
+    if(eachPalette === cardName){
+      eachPalette.classList.remove('colorNameDefault');
+      eachPalette.classList.remove('colorNameChoice2');
+      eachPalette.classList.add('colorNameChoice3');
 
-     } else if(eachPalette === rectangle){
-    eachPalette.classList.remove('colorRectangleDefault');
-    eachPalette.classList.remove('colorRectangleChoice2');
-    eachPalette.classList.add('colorRectangleChoice3');
-    
-  } else if(eachPalette === borderIcons){
-    eachPalette.classList.remove('colorIconsDefault');
-    eachPalette.classList.remove('colorIconsChoice2');
-    eachPalette.classList.add('colorIconsChoice3');
+    } else if(eachPalette === rectangle){
+      eachPalette.classList.remove('colorRectangleDefault');
+      eachPalette.classList.remove('colorRectangleChoice2');
+      eachPalette.classList.add('colorRectangleChoice3');
+
+    } else if(eachPalette === borderIcons){
+      eachPalette.classList.remove('colorIconsDefault');
+      eachPalette.classList.remove('colorIconsChoice2');
+      eachPalette.classList.add('colorIconsChoice3');
+    }
   }
 }
-
 function paintDefault(){
   for(const eachPalette of choiceColours){
     if(eachPalette === cardName){
-    eachPalette.classList.remove('colorNameChoice3');
-    eachPalette.classList.remove('colorNameChoice2');
-    eachPalette.classList.add('colorNameDefault');
-    
-  } else if(eachPalette === rectangle){
-    eachPalette.classList.remove('colorRectangleChoice3');
-    eachPalette.classList.remove('colorRectangleChoice2');
-    eachPalette.classList.add('colorRectangleDefault');
-    
-  } else if (eachPalette === borderIcons){
-    eachPalette.classList.remove('colorIconsChoice3');
-    eachPalette.classList.remove('colorIconsChoice2');
-    eachPalette.classList.add('colorIconsDefault');
-  }
+      eachPalette.classList.remove('colorNameChoice3');
+      eachPalette.classList.remove('colorNameChoice2');
+      eachPalette.classList.add('colorNameDefault');
+
+    } else if(eachPalette === rectangle){
+      eachPalette.classList.remove('colorRectangleChoice3');
+      eachPalette.classList.remove('colorRectangleChoice2');
+      eachPalette.classList.add('colorRectangleDefault');
+
+    } else if (eachPalette === borderIcons){
+      eachPalette.classList.remove('colorIconsChoice3');
+      eachPalette.classList.remove('colorIconsChoice2');
+      eachPalette.classList.add('colorIconsDefault');
+    }
   }
 }
 
@@ -258,7 +258,4 @@ inputEmail.addEventListener('keyup', handlerInputPreview);
 inputPhone.addEventListener('keyup', handlerInputPreview);
 inputLinkedin.addEventListener('keyup', handlerInputPreview);
 inputGitHub.addEventListener('keyup', handlerInputPreview);
-
-
-
 
