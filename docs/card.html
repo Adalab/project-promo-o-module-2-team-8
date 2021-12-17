@@ -38,29 +38,48 @@
             <p class="section1__reset--text">Reset</p>
           </button>
 
-          <article class="card">
-            <div class="card__rectangle js-choiceColours"></div>
+          <article class="card js-choiceColours">
+            <div class="card__rectangle"></div>
             <div class="card__user">
-              <h1 class="card__user--userName js-cardName js-choiceColours">Nombre apellido</h1>
+              <h1 class="card__user--userName js-cardName js-choiceColours">
+                Nombre apellido
+              </h1>
               <h2 class="card__user--job js-cardJob">Front developer</h2>
             </div>
-            <div class="card__img"></div>
-            <ul class="card__bar">
-              <li class="card__bar--icons">
-                <a class="js-cardPhone" title="Contáctame" href="#" target="_blank">
-                  <i class="js-choiceColours fas fa-mobile-alt"></i></a>
+            <div class="card__img js__profile-image"></div>
+            <ul class="card__bar ">
+              <li class="card__bar--icons js-choiceColours">
+                <a class="js-cardPhone " title="Contáctame" href="#" target="_blank">
+                  <i class="fas fa-mobile-alt"></i
+                ></a>
               </li>
-              <li class="card__bar--icons">
-                <a class="js-cardEmail" title="Mándame un correo" href="#" target="_blank">
-                  <i class="js-choiceColours far fa-envelope"></i></a>
+              <li class="card__bar--icons js-choiceColours">
+                <a
+                  class="js-cardEmail"
+                  title="Mándame un correo"
+                  href="#"
+                  target="_blank"
+                >
+                  <i class="far fa-envelope"></i
+                ></a>
               </li>
-              <li class="card__bar--icons">
-                <a class="js-cardLinkedin" title="Visita mi Linkedin" href="#" target="_blank"><i
-                    class="js-choiceColours fab fa-linkedin-in"></i></a>
+              <li class="card__bar--icons js-choiceColours">
+                <a
+                  class="js-cardLinkedin"
+                  title="Visita mi Linkedin"
+                  href="#"
+                  target="_blank"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
               </li>
-              <li class="card__bar--icons">
-                <a class="js-cardGitHub" title="Visita mi GitHub" href="#" target="_blank"><i
-                    class="js-choiceColours fab fa-github-alt"></i></a>
+              <li class="card__bar--icons js-choiceColours">
+                <a
+                  class="js-cardGitHub"
+                  title="Visita mi GitHub"
+                  href="#"
+                  target="_blank"
+                  ><i class="fab fa-github-alt"></i
+                ></a>
               </li>
             </ul>
           </article>
@@ -89,21 +108,42 @@
               <nav>
                 <ul class="designContainer__choosePalette">
                   <li class="designContainer__choosePalette--palette">
-                    <input class="inputRadio js-palette" value="1" id="1" type="radio" name="palette" checked />
+                    <input
+                      class="inputRadio js-palette"
+                      value="1"
+                      id="1"
+                      type="radio"
+                      name="palette"
+                      checked = true
+                    />
                     <div class="color color-darkGreen"></div>
                     <div class="color color-blue"></div>
                     <div class="color color-green"></div>
                   </li>
 
                   <li class="designContainer__choosePalette--palette">
-                    <input class="inputRadio js-palette" value="2" id="2" type="radio" name="palette" />
+                    <input
+                      class="inputRadio js-palette"
+                      value="2"
+                      id="2"
+                      type="radio"
+                      name="palette"
+                    
+                    />
 
                     <div class="color color-darkRed"></div>
                     <div class="color color-red"></div>
                     <div class="color color-tomato"></div>
                   </li>
                   <li class="designContainer__choosePalette--palette">
-                    <input class="inputRadio js-palette" value="3" id="3" type="radio" name="palette" />
+                    <input
+                      class="inputRadio js-palette"
+                      value="3"
+                      id="3"
+                      type="radio"
+                      name="palette"
+             
+                    />
                     <div class="color color-slate"></div>
                     <div class="color color-orange"></div>
                     <div class="color color-lightBlue"></div>
@@ -143,8 +183,9 @@
               <label class="label labelsWrapper__imgLabel" for="img">
                 <span class="labelsWrapper__imgLabel--title">Imagen de perfil</span>
                 <div class="labelsWrapper__imgLabel--container">
-                  <button class="imgLabel-btn" name="photo">Añadir imagen</button>
-                  <div class="imgLabel-div"></div>
+                  <label for="photo" class="imgLabel-btn js__profile-trigger" name="photo">Añadir imagen</label>
+                  <input class="js__profile-upload-btn" type="file" name="photo" id="photo" />
+                  <div class="imgLabel-div js__profile-preview"></div>
                 </div>
               </label>
               <label class="label" for="emailAddress">
