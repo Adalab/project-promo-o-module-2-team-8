@@ -96,6 +96,10 @@ for (const eachRadio of palettesRadio) {
   eachRadio.addEventListener('click', paintCardPreview);
 }
 
+
+
+
+
 // Form objet
 
 let formObject= {

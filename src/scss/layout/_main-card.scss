@@ -88,7 +88,7 @@
     }
     &__img {
       grid-column: 1/4;
-      background-image: url('../images/fondo.jpg');
+      background-image: url("../images/fondo.jpg");
       background-position: top center;
       background-size: cover;
       background-color: $whiteTwo;
@@ -119,38 +119,44 @@
     }
   }
 
-  // Change color name title js
-  .colorDefault .colorNameDefault {
-    background-color: $darkGreenBlue;
-  }
-  .colorChoice2 .colorNameChoice2 {
-    background-color: $driedBlood;
-  }
-  .colorChoice3 .colorNameChoice3 {
-    background-color: $slate;
-  }
+  // // Change color name title js
 
   //Color palettes icons js
-  .colorDefault .colorIconsDefault {
-    border: solid 2px $hospitalGreen;
-  }
-  .colorChoice2 .colorIconsChoice2 {
-    border: solid 2px $tomato;
-  }
-  .colorChoice3 .colorIconsChoice3 {
-    border: solid 2px $lightGreyBlue;
+  .colorDefault {
+    color: $darkGreenBlue;
+
+    .card__rectangle {
+      background-color: $dirtyBlue;
+    }
+
+    .card__bar--icons {
+      border: solid 2px $hospitalGreen;
+    }
   }
 
-  // Change color rectangle js
-  .colorDefault .colorRectangleDefault {
-    background-color: $dirtyBlue;
+  .colorChoice2 {
+    color: $driedBlood;
+
+    .card__rectangle {
+      background-color: $rustyRed;
+    }
+    .card__bar--icons {
+      border: solid 2px $tomato;
+    }
   }
-  .colorChoice2 .colorRectangleChoice2 {
-    background-color: $rustyRed;
+
+  .colorChoice3 {
+    color: $dirtyBlue;
+
+    .card__rectangle {
+      background-color: $fadedOrange;
+    }
+
+    .card__bar--icons {
+      border: solid 2px $lightGreyBlue;
+    }
   }
-  .colorChoice3 .colorRectangleChoice3 {
-    background-color: $fadedOrange;
-  }
+
   // SECTION 2
 
   .section2-wrapper {
