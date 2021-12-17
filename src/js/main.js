@@ -12,7 +12,7 @@ const collapsableShareSection= document.querySelector('.js-shareSection');
 const resetBtn = document.querySelector('.js-reset');
 
 // Input variables
-// const inputPalette = document.querySelector('.js-inputGitHub');
+// const inputPalette = document.querySelector('.js-inputPalette');
 const inputName = document.querySelector('.js-inputName');
 const inputJob = document.querySelector('.js-inputJob');
 const inputEmail = document.querySelector('.js-inputEmail');
@@ -33,7 +33,8 @@ const choiceColours = document.querySelectorAll('.js-choiceColours');
 
 const palettesRadio = document.querySelectorAll('.js-palette');
 
-
+const rectangle = document.querySelector('.js-rectangle');
+const borderIcons = document.querySelectorAll('.js-borderIcons');
 
 
 // FUNCTIONS
@@ -70,25 +71,58 @@ function paintCardPreview(event){
 
 function paintChoice2(){
   for(const eachPalette of choiceColours){
-    eachPalette.classList.remove('colorDefault');
-    eachPalette.classList.remove('colorChoice3');
-    eachPalette.classList.add('colorChoice2');
-  }
+    if(eachPalette === cardName){ 
+      eachPalette.classList.remove('colorNameDefault');
+      eachPalette.classList.remove('colorNameChoice3');
+      eachPalette.classList.add('colorNameChoice2');
+    } else if (eachPalette === rectangle){ 
+      eachPalette.classList.remove('colorRectangleDefault');
+      eachPalette.classList.remove('colorRectangleChoice3');
+      eachPalette.classList.add('colorRectangleChoice2');
+    } else if (eachPalette === borderIcons){
+      eachPalette.classList.remove('colorIconsDefault');
+      eachPalette.classList.remove('colorIconsChoice3');
+      eachPalette.classList.add('colorIconsChoice2');
+    }
+   }
 }
 
 function paintChoice3(){
-  for(const eachPalette of choiceColours){
-    eachPalette.classList.remove('colorDefault');
-    eachPalette.classList.remove('colorChoice2');
-    eachPalette.classList.add('colorChoice3');
+  for(const eachPalette of choiceColours){   
+    if(eachPalette === cardName){ 
+    eachPalette.classList.remove('colorNameDefault');
+    eachPalette.classList.remove('colorNameChoice2');
+    eachPalette.classList.add('colorNameChoice3');
+
+     } else if(eachPalette === rectangle){
+    eachPalette.classList.remove('colorRectangleDefault');
+    eachPalette.classList.remove('colorRectangleChoice2');
+    eachPalette.classList.add('colorRectangleChoice3');
+    
+  } else if(eachPalette === borderIcons){
+    eachPalette.classList.remove('colorIconsDefault');
+    eachPalette.classList.remove('colorIconsChoice2');
+    eachPalette.classList.add('colorIconsChoice3');
   }
 }
 
 function paintDefault(){
   for(const eachPalette of choiceColours){
-    eachPalette.classList.remove('colorChoice2');
-    eachPalette.classList.remove('colorChoice3');
-    eachPalette.classList.add('colorDefault');
+    if(eachPalette === cardName){
+    eachPalette.classList.remove('colorNameChoice3');
+    eachPalette.classList.remove('colorNameChoice2');
+    eachPalette.classList.add('colorNameDefault');
+    
+  } else if(eachPalette === rectangle){
+    eachPalette.classList.remove('colorRectangleChoice3');
+    eachPalette.classList.remove('colorRectangleChoice2');
+    eachPalette.classList.add('colorRectangleDefault');
+    
+  } else if (eachPalette === borderIcons){
+    eachPalette.classList.remove('colorIconsChoice3');
+    eachPalette.classList.remove('colorIconsChoice2');
+    eachPalette.classList.add('colorIconsDefault');
+  }
   }
 }
 
@@ -99,13 +133,14 @@ for (const eachRadio of palettesRadio) {
 // Form objet
 
 let formObject= {
-  palette: '1',
+  palette: 1,
   name: '',
   job: '',
   phone:'',
   email:'',
   linkedin:'',
-  gitHub:''
+  gitHub:'',
+  photo: ''
 };
 
 function nameInputPreview(){
@@ -225,6 +260,5 @@ inputLinkedin.addEventListener('keyup', handlerInputPreview);
 inputGitHub.addEventListener('keyup', handlerInputPreview);
 
 
-// function handlerUpdatePreview(){
-//   cardName.innerHTML= formObject.nameSurname.value;
-// }
+
+
