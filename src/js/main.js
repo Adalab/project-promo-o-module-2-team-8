@@ -34,8 +34,6 @@ const choiceColours = document.querySelectorAll('.js-choiceColours');
 const palettesRadio = document.querySelectorAll('.js-palette');
 
 
-
-
 // FUNCTIONS
 // Collapsed containers function
 function handlerClickHeader(event) {
@@ -95,9 +93,6 @@ function paintDefault(){
 for (const eachRadio of palettesRadio) {
   eachRadio.addEventListener('click', paintCardPreview);
 }
-
-
-
 
 
 // Form objet
