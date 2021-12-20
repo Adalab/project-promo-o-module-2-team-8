@@ -2,7 +2,8 @@
 /* eslint-disable no-trailing-spaces */
 
 'use strict';
-
+const createBtn= document.querySelector('.js-createBtn');
+const collapsableShareSection= document.querySelector('.js-shareSection');
 // 1º- Bring create button element from HTML
 const btnCreateCard= document.querySelector('.js-createBtn');
 const linkCreateCard= document.querySelector('.js-createCardLink');
@@ -19,11 +20,17 @@ function handleCreateCard(ev){
     .then((response) => response.json())
     .then((formObject) => {
       console.log(formObject);
+
       if(formObject.success){
+        createBtn.classList.remove('createBtnColor1');
+        createBtn.classList.add('createBtnColor2');
+        collapsableShareSection.classList.remove('hidden');
       linkCreateCard.innerHTML= formObject.cardURL;
       linkCreateCard.href= formObject.cardURL;
       } else{
+        // catch(error)=> console.log(`Se ha producido un error: ${error}`);
           console.log('Error');
+          window.alert('comprueba que has rellenado los campos requeridos');
       }
     });
 }

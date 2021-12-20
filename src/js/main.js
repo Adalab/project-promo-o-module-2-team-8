@@ -5,8 +5,8 @@ const collapsableTitle = document.querySelector('.js-arrowCollapsable');
 const collapsableTitle2 = document.querySelector('.js-arrowCollapsable2');
 const collapsableTitle3 = document.querySelector('.js-arrowCollapsable3');
 
-const createBtn= document.querySelector('.js-createBtn');
-const collapsableShareSection= document.querySelector('.js-shareSection');
+// const createBtn= document.querySelector('.js-createBtn');
+// const collapsableShareSection= document.querySelector('.js-shareSection');
 
 //botón reset
 const resetBtn = document.querySelector('.js-reset');
@@ -44,13 +44,13 @@ function handlerClickHeader(event) {
 }
 
 // Collapsed btn
-function handlerClickCreateBtn(event){
-  if(event){
-    collapsableShareSection.classList.remove('hidden');
-    createBtn.classList.remove('createBtnColor1');
-    createBtn.classList.add('createBtnColor2');
-  }
-}
+// function handlerClickCreateBtn(event){
+//   if(event){
+//     collapsableShareSection.classList.remove('hidden');
+//     createBtn.classList.remove('createBtnColor1');
+//     createBtn.classList.add('createBtnColor2');
+//   }
+// }
 
 
 // Function palette
@@ -97,15 +97,14 @@ for (const eachRadio of palettesRadio) {
 
 // Form objet
 
-const formObject= {
+let formObject= {
   palette: 1,
   name: '',
   job: '',
   phone:'',
   email:'',
   linkedin:'',
-  github:'',
-  photo: ''
+  github:''
 };
 
 function nameInputPreview(){
@@ -211,7 +210,7 @@ collapsableTitle.addEventListener('click', handlerClickHeader);
 collapsableTitle2.addEventListener('click', handlerClickHeader);
 collapsableTitle3.addEventListener('click', handlerClickHeader);
 
-createBtn.addEventListener('click', handlerClickCreateBtn);
+// createBtn.addEventListener('click', handlerClickCreateBtn);
 
 //Reset Btn Listener
 resetBtn.addEventListener('click', handlerClickResetBtn);
