@@ -322,9 +322,9 @@
     height: 30px;
     margin-top: 7px;
     border: 1px solid $colorInputForm;
+    padding: 3px 0 7px 9px;
     &::placeholder {
       color: $colorPlaceholders;
-      padding: 3px 0 7px 9px;
     }
   }
 
