@@ -5,7 +5,7 @@ const collapsableTitle = document.querySelector('.js-arrowCollapsable');
 const collapsableTitle2 = document.querySelector('.js-arrowCollapsable2');
 const collapsableTitle3 = document.querySelector('.js-arrowCollapsable3');
 
-const shareBtn= document.querySelector('.js-shareBtn');
+const createBtn= document.querySelector('.js-createBtn');
 const collapsableShareSection= document.querySelector('.js-shareSection');
 
 //botón reset
@@ -44,11 +44,11 @@ function handlerClickHeader(event) {
 }
 
 // Collapsed btn
-function handlerClickShareBtn(event){
+function handlerClickCreateBtn(event){
   if(event){
     collapsableShareSection.classList.remove('hidden');
-    shareBtn.classList.remove('shareBtnColor1');
-    shareBtn.classList.add('shareBtnColor2');
+    createBtn.classList.remove('createBtnColor1');
+    createBtn.classList.add('createBtnColor2');
   }
 }
 
@@ -97,14 +97,15 @@ for (const eachRadio of palettesRadio) {
 
 // Form objet
 
-let formObject= {
-  palette: '1',
+const formObject= {
+  palette: 1,
   name: '',
   job: '',
   phone:'',
   email:'',
   linkedin:'',
-  gitHub:''
+  github:'',
+  photo: ''
 };
 
 function nameInputPreview(){
@@ -157,8 +158,8 @@ function linkedinInputPreview(){
 }
 
 function gitHubInputPreview(){
-  formObject.gitHub= inputGitHub.value;
-  const gitHubPreview= formObject.gitHub;
+  formObject.github= inputGitHub.value;
+  const gitHubPreview= formObject.github;
   if(gitHubPreview===''){
     cardGitHub.href= ``;
   }else{
@@ -197,8 +198,8 @@ function handlerClickResetBtn() {
   formObject.linkedin = '';
   inputLinkedin.value = formObject.linkedin;
 
-  formObject.gitHub = '';
-  inputGitHub.value = formObject.gitHub;
+  formObject.github = '';
+  inputGitHub.value = formObject.github;
   handlerInputPreview();
 
   //coger valores
@@ -210,7 +211,7 @@ collapsableTitle.addEventListener('click', handlerClickHeader);
 collapsableTitle2.addEventListener('click', handlerClickHeader);
 collapsableTitle3.addEventListener('click', handlerClickHeader);
 
-shareBtn.addEventListener('click', handlerClickShareBtn);
+createBtn.addEventListener('click', handlerClickCreateBtn);
 
 //Reset Btn Listener
 resetBtn.addEventListener('click', handlerClickResetBtn);

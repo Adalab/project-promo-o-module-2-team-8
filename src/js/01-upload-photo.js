@@ -32,7 +32,7 @@ function writeImage() {
   profileImage.style.backgroundImage = `url(${fr.result})`;
   profilePreview.style.backgroundImage = `url(${fr.result})`;
 
-  data.photo = fr.result; //esto se envía al servidor para que lo guarde
+  formObject.photo = fr.result; //esto se envía al servidor para que lo guarde
 }
 
 /**
