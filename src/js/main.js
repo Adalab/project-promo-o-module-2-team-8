@@ -98,13 +98,13 @@ for (const eachRadio of palettesRadio) {
 // Form objet
 
 let formObject= {
-  palette: '1',
+  palette: 1,
   name: '',
   job: '',
   phone:'',
   email:'',
   linkedin:'',
-  gitHub:''
+  github:''
 };
 
 function nameInputPreview(){
@@ -157,8 +157,8 @@ function linkedinInputPreview(){
 }
 
 function gitHubInputPreview(){
-  formObject.gitHub= inputGitHub.value;
-  const gitHubPreview= formObject.gitHub;
+  formObject.github= inputGitHub.value;
+  const gitHubPreview= formObject.github;
   if(gitHubPreview===''){
     cardGitHub.href= ``;
   }else{
@@ -198,7 +198,7 @@ function handlerClickResetBtn() {
   inputLinkedin.value = formObject.linkedin;
 
   formObject.gitHub = '';
-  inputGitHub.value = formObject.gitHub;
+  inputGitHub.value = formObject.github;
   handlerInputPreview();
 
   //coger valores
