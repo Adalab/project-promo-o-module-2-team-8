@@ -5,8 +5,8 @@ const collapsableTitle = document.querySelector('.js-arrowCollapsable');
 const collapsableTitle2 = document.querySelector('.js-arrowCollapsable2');
 const collapsableTitle3 = document.querySelector('.js-arrowCollapsable3');
 
-const shareBtn= document.querySelector('.js-shareBtn');
-const collapsableShareSection= document.querySelector('.js-shareSection');
+// const createBtn= document.querySelector('.js-createBtn');
+// const collapsableShareSection= document.querySelector('.js-shareSection');
 
 //botón reset
 const resetBtn = document.querySelector('.js-reset');
@@ -44,13 +44,13 @@ function handlerClickHeader(event) {
 }
 
 // Collapsed btn
-function handlerClickShareBtn(event){
-  if(event){
-    collapsableShareSection.classList.remove('hidden');
-    shareBtn.classList.remove('shareBtnColor1');
-    shareBtn.classList.add('shareBtnColor2');
-  }
-}
+// function handlerClickCreateBtn(event){
+//   if(event){
+//     collapsableShareSection.classList.remove('hidden');
+//     createBtn.classList.remove('createBtnColor1');
+//     createBtn.classList.add('createBtnColor2');
+//   }
+// }
 
 
 // Function palette
@@ -197,7 +197,7 @@ function handlerClickResetBtn() {
   formObject.linkedin = '';
   inputLinkedin.value = formObject.linkedin;
 
-  formObject.gitHub = '';
+  formObject.github = '';
   inputGitHub.value = formObject.github;
   handlerInputPreview();
 
@@ -210,7 +210,7 @@ collapsableTitle.addEventListener('click', handlerClickHeader);
 collapsableTitle2.addEventListener('click', handlerClickHeader);
 collapsableTitle3.addEventListener('click', handlerClickHeader);
 
-shareBtn.addEventListener('click', handlerClickShareBtn);
+// createBtn.addEventListener('click', handlerClickCreateBtn);
 
 //Reset Btn Listener
 resetBtn.addEventListener('click', handlerClickResetBtn);
