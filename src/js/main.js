@@ -37,20 +37,23 @@ const palettesRadio = document.querySelectorAll('.js-palette');
 // FUNCTIONS
 // Collapsed containers function
 function handlerClickHeader(event) {
-  event.currentTarget.parentNode.parentNode.classList.toggle('collapsed');
+  if (event.currentTarget===collapsableTitle){
+    event.currentTarget.parentNode.parentNode.classList.toggle('collapsed');
+    collapsableTitle2.parentNode.parentNode.classList.add('collapsed');
+    collapsableTitle3.parentNode.parentNode.classList.add('collapsed');
+  }else if(event.currentTarget===collapsableTitle2){
+    event.currentTarget.parentNode.parentNode.classList.toggle('collapsed');
+    collapsableTitle.parentNode.parentNode.classList.add('collapsed');
+    collapsableTitle3.parentNode.parentNode.classList.add('collapsed');
+  }else if(event.currentTarget===collapsableTitle3){
+    event.currentTarget.parentNode.parentNode.classList.toggle('collapsed');
+    collapsableTitle.parentNode.parentNode.classList.add('collapsed');
+    collapsableTitle2.parentNode.parentNode.classList.add('collapsed');
+  }
   if(event.currentTarget){
     event.currentTarget.classList.toggle('rotateArrow');
   }
 }
-
-// Collapsed btn
-// function handlerClickCreateBtn(event){
-//   if(event){
-//     collapsableShareSection.classList.remove('hidden');
-//     createBtn.classList.remove('createBtnColor1');
-//     createBtn.classList.add('createBtnColor2');
-//   }
-// }
 
 
 // Function palette
