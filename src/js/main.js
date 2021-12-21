@@ -55,6 +55,19 @@ function handlerClickHeader(event) {
   }
 }
 
+// Form objet
+
+let formObject= {
+  palette: 1,
+  name: '',
+  job: '',
+  phone:'',
+  email:'',
+  linkedin:'',
+  github:'',
+  photo:''
+};
+
 
 // Function palette
 
@@ -62,10 +75,13 @@ function paintCardPreview(event){
   const paletteChecked= parseInt(event.currentTarget.id);
   if(paletteChecked=== 1){
     paintDefault();
+    formObject.palette= 1;
   }else if(paletteChecked===2){
     paintChoice2();
+    formObject.palette= 2;
   }else{
     paintChoice3();
+    formObject.palette= 3;
   }
 }
 
@@ -100,30 +116,19 @@ for (const eachRadio of palettesRadio) {
 }
 
 
-// Form objet
-
-let formObject= {
-  palette: 1,
-  name: '',
-  job: '',
-  phone:'',
-  email:'',
-  linkedin:'',
-  github:''
-};
 
 // !!!COMPROBAR POR QUÉ SOLO COGE EL COLOR 3
-function palettePreview(){
-  for(const item in palettesRadio){
-    if(item.value === 1){
-      formObject.palette= 1;
-    } if(item.value === 2){
-      formObject.palette= 2;
-    } else{
-      formObject.palette= 3;
-    }
-  }
-}
+// function palettePreview(){
+//   for(const item in palettesRadio){
+//     if(item.value === 1){
+//       formObject.palette= 1;
+//     } if(item.value === 2){
+//       formObject.palette= 2;
+//     } else{
+//       formObject.palette= 3;
+//     }
+//   }
+// }
 
 function nameInputPreview(){
   formObject.name= inputName.value;
@@ -198,7 +203,7 @@ function handlerInputPreview(){
 
 function handlerClickResetBtn() {
   // formObject.palette= '';
-  // inputName.value = formObject.palette;
+  // inputPalette.value = formObject.palette;
 
   formObject.name = '';
   inputName.value = formObject.name;
