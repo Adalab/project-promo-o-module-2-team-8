@@ -20,7 +20,6 @@ function handleCreateCard(ev){
     })
     .then((response) => response.json())
     .then((formObject) => {
-      console.log(formObject);
 
       if(formObject.success){
         createBtn.classList.remove('createBtnColor1');

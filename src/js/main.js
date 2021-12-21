@@ -69,6 +69,8 @@ function paintCardPreview(event){
   }
 }
 
+
+
 function paintChoice2(){
   for(const eachPalette of choiceColours){
     eachPalette.classList.remove('colorDefault');
@@ -109,6 +111,19 @@ let formObject= {
   linkedin:'',
   github:''
 };
+
+// !!!COMPROBAR POR QUÉ SOLO COGE EL COLOR 3
+function palettePreview(){
+  for(const item in palettesRadio){
+    if(item.value === 1){
+      formObject.palette= 1;
+    } if(item.value === 2){
+      formObject.palette= 2;
+    } else{
+      formObject.palette= 3;
+    }
+  }
+}
 
 function nameInputPreview(){
   formObject.name= inputName.value;
@@ -213,19 +228,22 @@ collapsableTitle.addEventListener('click', handlerClickHeader);
 collapsableTitle2.addEventListener('click', handlerClickHeader);
 collapsableTitle3.addEventListener('click', handlerClickHeader);
 
-// createBtn.addEventListener('click', handlerClickCreateBtn);
+// createBtn.addEventListener('click',palettePreview);
 
 //Reset Btn Listener
 resetBtn.addEventListener('click', handlerClickResetBtn);
 
 // Fill function Listeners
+
 inputName.addEventListener('keyup', handlerInputPreview);
 inputJob.addEventListener('keyup', handlerInputPreview);
 inputEmail.addEventListener('keyup', handlerInputPreview);
 inputPhone.addEventListener('keyup', handlerInputPreview);
 inputLinkedin.addEventListener('keyup', handlerInputPreview);
 inputGitHub.addEventListener('keyup', handlerInputPreview);
-
+for(const item of palettesRadio){
+  item.addEventListener('change', palettePreview);
+}
 
 // function handlerUpdatePreview(){
 //   cardName.innerHTML= formObject.nameSurname.value;
