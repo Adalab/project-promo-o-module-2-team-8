@@ -7,6 +7,7 @@ const collapsableShareSection= document.querySelector('.js-shareSection');
 // 1º- Bring create button element from HTML
 const btnCreateCard= document.querySelector('.js-createBtn');
 const linkCreateCard= document.querySelector('.js-createCardLink');
+
 // 3º- Create function: when create button is clicked:
 function handleCreateCard(ev){
     ev.preventDefault(); // To prevent the submit event
