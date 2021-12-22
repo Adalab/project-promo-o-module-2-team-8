@@ -232,9 +232,7 @@ inputEmail.addEventListener('keyup', handlerInputPreview);
 inputPhone.addEventListener('keyup', handlerInputPreview);
 inputLinkedin.addEventListener('keyup', handlerInputPreview);
 inputGitHub.addEventListener('keyup', handlerInputPreview);
-for(const item of palettesRadio){
-  item.addEventListener('change', palettePreview);
-}
+
 
 // function handlerUpdatePreview(){
 //   cardName.innerHTML= formObject.nameSurname.value;
