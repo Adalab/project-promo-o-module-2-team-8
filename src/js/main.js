@@ -20,6 +20,8 @@ const inputPhone = document.querySelector('.js-inputPhone');
 const inputLinkedin = document.querySelector('.js-inputLinkedin');
 const inputGitHub = document.querySelector('.js-inputGitHub');
 
+//const allInputs= document.querySelectorAll('.js-allInputs');
+
 // Preview variables
 const cardName = document.querySelector('.js-cardName');
 const cardJob = document.querySelector('.js-cardJob');
@@ -184,6 +186,10 @@ function handlerInputPreview(){
   phoneInputPreview();
   linkedinInputPreview();
   gitHubInputPreview();
+
+  //save input values
+  localStorage.setItem('formObject', JSON.stringify(formObject));
+  loadSavedUserData();
 }
 
 
@@ -213,19 +219,21 @@ function handlerClickResetBtn() {
 
   cardPhoto.style.backgroundImage= 'url("./assets/images/fondo.jpg")';
   cardPreviewPhoto.style.backgroundImage = '';
-  formObject.photo= 
-  // if (formObject.photo=== ''){
-  //   cardPhoto.style.backgroundImage = 'url(../images/fondo.jpg)';
-  //   cardPreviewPhoto.style.backgroundImage = '';
-  // } else{
-  //   cardPhoto.style.backgroundImage = `url(${formObject.photo})`;
-  //   cardPreviewPhoto.style.backgroundImage = `url(${formObject.photo})`;
-  // }
 
   handlerInputPreview();
 
   //coger valores
 }
+
+// Recover saved input value (localStorage):
+function loadSavedUserData(){
+  const savedUserData= JSON.parse(localStorage.getItem('formObject'));
+  if(savedUserData !== null){
+    formObject= savedUserData;
+    handlerInputPreview();
+  }
+}
+
 
 // LISTENERS:
 // Collapsed function Listeners

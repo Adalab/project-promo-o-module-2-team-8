@@ -33,6 +33,7 @@ function writeImage() {
   profilePreview.style.backgroundImage = `url(${fr.result})`;
 
   formObject.photo = fr.result; //esto se envía al servidor para que lo guarde
+  localStorage.setItem('formObject', JSON.stringify(formObject));
 }
 
 /**
