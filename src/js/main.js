@@ -189,7 +189,7 @@ function handlerInputPreview(){
 
 function handlerClickResetBtn() {
   formObject.palette= paintDefault();
-  
+  palettesRadio[0].checked= true;
 
   formObject.name = '';
   inputName.value = formObject.name;
