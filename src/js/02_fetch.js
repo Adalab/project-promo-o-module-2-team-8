@@ -8,6 +8,8 @@ const collapsableShareSection= document.querySelector('.js-shareSection');
 const btnCreateCard= document.querySelector('.js-createBtn');
 const linkCreateCard= document.querySelector('.js-createCardLink');
 
+const twitterLink = document.querySelector('.js-twitterLink');
+
 // 3º- Create function: when create button is clicked:
 function handleCreateCard(ev){
     ev.preventDefault(); // To prevent the submit event
@@ -27,10 +29,12 @@ function handleCreateCard(ev){
         collapsableShareSection.classList.remove('hidden');
       linkCreateCard.innerHTML= formObject.cardURL;
       linkCreateCard.href= formObject.cardURL;
+      const textCard = 'Mira mi tarjeta';
+        twitterLink.href = `https://twitter.com/intent/tweet?text=${textCard}&url=${formObject.cardURL}`;
       } else{
         // catch(error)=> console.log(`Se ha producido un error: ${error}`);
           console.log('Error');
-          window.alert('comprueba que has rellenado los campos requeridos');
+          // window.alert('comprueba que has rellenado los campos requeridos');
       }
     });
 }

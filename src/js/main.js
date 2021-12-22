@@ -116,20 +116,6 @@ for (const eachRadio of palettesRadio) {
 }
 
 
-
-// !!!COMPROBAR POR QUÉ SOLO COGE EL COLOR 3
-// function palettePreview(){
-//   for(const item in palettesRadio){
-//     if(item.value === 1){
-//       formObject.palette= 1;
-//     } if(item.value === 2){
-//       formObject.palette= 2;
-//     } else{
-//       formObject.palette= 3;
-//     }
-//   }
-// }
-
 function nameInputPreview(){
   formObject.name= inputName.value;
   const namePreview= formObject.name;
@@ -202,8 +188,8 @@ function handlerInputPreview(){
 //función botón reset
 
 function handlerClickResetBtn() {
-  // formObject.palette= '';
-  // inputPalette.value = formObject.palette;
+  formObject.palette= paintDefault();
+  
 
   formObject.name = '';
   inputName.value = formObject.name;
