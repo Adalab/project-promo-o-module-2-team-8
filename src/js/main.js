@@ -27,6 +27,8 @@ const cardEmail = document.querySelector('.js-cardEmail');
 const cardPhone = document.querySelector('.js-cardPhone');
 const cardLinkedin = document.querySelector('.js-cardLinkedin');
 const cardGitHub = document.querySelector('.js-cardGitHub');
+const cardPhoto= document.querySelector('.js__profile-image');
+const cardPreviewPhoto= document.querySelector('.js__profile-preview');
 
 // Palettes
 const choiceColours = document.querySelectorAll('.js-choiceColours');
@@ -65,7 +67,7 @@ let formObject= {
   email:'',
   linkedin:'',
   github:'',
-  photo:''
+  photo:'url("./assets/images/fondo.jpg")'
 };
 
 
@@ -208,6 +210,18 @@ function handlerClickResetBtn() {
 
   formObject.github = '';
   inputGitHub.value = formObject.github;
+
+  cardPhoto.style.backgroundImage= 'url("./assets/images/fondo.jpg")';
+  cardPreviewPhoto.style.backgroundImage = '';
+  formObject.photo= 
+  // if (formObject.photo=== ''){
+  //   cardPhoto.style.backgroundImage = 'url(../images/fondo.jpg)';
+  //   cardPreviewPhoto.style.backgroundImage = '';
+  // } else{
+  //   cardPhoto.style.backgroundImage = `url(${formObject.photo})`;
+  //   cardPreviewPhoto.style.backgroundImage = `url(${formObject.photo})`;
+  // }
+
   handlerInputPreview();
 
   //coger valores
