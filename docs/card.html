@@ -50,36 +50,19 @@
             <ul class="card__bar ">
               <li class="card__bar--icons js-choiceColours">
                 <a class="js-cardPhone " title="Contáctame" href="#" target="_blank">
-                  <i class="fas fa-mobile-alt"></i
-                ></a>
+                  <i class="fas fa-mobile-alt"></i></a>
               </li>
               <li class="card__bar--icons js-choiceColours">
-                <a
-                  class="js-cardEmail"
-                  title="Mándame un correo"
-                  href="#"
-                  target="_blank"
-                >
-                  <i class="far fa-envelope"></i
-                ></a>
+                <a class="js-cardEmail" title="Mándame un correo" href="#" target="_blank">
+                  <i class="far fa-envelope"></i></a>
               </li>
               <li class="card__bar--icons js-choiceColours">
-                <a
-                  class="js-cardLinkedin"
-                  title="Visita mi Linkedin"
-                  href="#"
-                  target="_blank"
-                  ><i class="fab fa-linkedin-in"></i
-                ></a>
+                <a class="js-cardLinkedin" title="Visita mi Linkedin" href="#" target="_blank"><i
+                    class="fab fa-linkedin-in"></i></a>
               </li>
               <li class="card__bar--icons js-choiceColours">
-                <a
-                  class="js-cardGitHub"
-                  title="Visita mi GitHub"
-                  href="#"
-                  target="_blank"
-                  ><i class="fab fa-github-alt"></i
-                ></a>
+                <a class="js-cardGitHub" title="Visita mi GitHub" href="#" target="_blank"><i
+                    class="fab fa-github-alt"></i></a>
               </li>
             </ul>
           </article>
@@ -87,7 +70,7 @@
       </section>
 
       <section class="section2 section2-wrapper">
-        <form action="" class="section2__form">
+        <form class="section2__form">
           <!-- Design fieldset -->
           <fieldset class="fieldsetContainer section2__form--designFieldset">
             <legend class="titleContainer js-collapsable_title">
@@ -108,42 +91,21 @@
               <nav>
                 <ul class="designContainer__choosePalette">
                   <li class="designContainer__choosePalette--palette">
-                    <input
-                      class="inputRadio js-palette"
-                      value="1"
-                      id="1"
-                      type="radio"
-                      name="palette"
-                      checked = true
-                    />
+                    <input class="inputRadio js-palette js-allInputs" value="1" id="1" type="radio" name="palette" checked=true />
                     <div class="color color-darkGreen"></div>
                     <div class="color color-blue"></div>
                     <div class="color color-green"></div>
                   </li>
 
                   <li class="designContainer__choosePalette--palette">
-                    <input
-                      class="inputRadio js-palette"
-                      value="2"
-                      id="2"
-                      type="radio"
-                      name="palette"
-                    
-                    />
+                    <input class="inputRadio js-palette js-allInputs" value="2" id="2" type="radio" name="palette" />
 
                     <div class="color color-darkRed"></div>
                     <div class="color color-red"></div>
                     <div class="color color-tomato"></div>
                   </li>
                   <li class="designContainer__choosePalette--palette">
-                    <input
-                      class="inputRadio js-palette"
-                      value="3"
-                      id="3"
-                      type="radio"
-                      name="palette"
-             
-                    />
+                    <input class="inputRadio js-palette js-allInputs" value="3" id="3" type="radio" name="palette" />
                     <div class="color color-slate"></div>
                     <div class="color color-orange"></div>
                     <div class="color color-lightBlue"></div>
@@ -154,7 +116,7 @@
           </fieldset>
 
           <!-- Fill fieldset -->
-          <fieldset class="fieldsetContainer section2__form--completeFieldset">
+          <fieldset class="fieldsetContainer section2__form--completeFieldset collapsed">
             <legend class="titleContainer">
               <div class="titleContainer__titleItem">
                 <i class="far fa-keyboard icon"></i>
@@ -171,13 +133,13 @@
               <!-- <div class="js-collapsed"> -->
               <label class="label" for="completeName">
                 Nombre completo
-                <input class="completeFieldset-input js-inputName" id="completeName" type="text" name="name"
+                <input class="completeFieldset-input js-inputName js-allInputs" id="completeName" type="text" name="name"
                   placeholder="Ej: Sally Jill" pattern="^\b([A-ZÀ-ÿ][-,a-z ']+[ ]*)+$"
                   title="Introduce tu nombre o tu nombre completo" required />
               </label>
               <label class="label labelsWrapper__jobLabel" for="job">
                 Puesto
-                <input class="completeFieldset-input js-inputJob" id="job" type="text" name="job"
+                <input class="completeFieldset-input js-inputJob js-allInputs" id="job" type="text" name="job"
                   placeholder="Ej: Front-end unicorn" title="Introduce el puesto que desempeñas" required />
               </label>
               <label class="label labelsWrapper__imgLabel" for="img">
@@ -190,7 +152,7 @@
               </label>
               <label class="label" for="emailAddress">
                 Email
-                <input class="completeFieldset-input js-inputEmail" placeholder="nombre.apellidos@mail.com"
+                <input class="completeFieldset-input js-inputEmail js-allInputs" placeholder="nombre.apellidos@mail.com"
                   id="emailAddress" type="email" name="email" title="Introduce un email válido"
                   pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?.)+[.][a-z0-9](?:[a-z0-9-]*[a-z0-9])?$"
                   required />
@@ -201,25 +163,25 @@
                     completeFieldset-input
                     contact__form--item
                     phoneNumber
-                    js-inputPhone
+                    js-inputPhone js-allInputs
                   " placeholder="Ej: 555-55-55-55" id="phoneNumber" type="tel" name="phone" pattern="^[0-9]{9}$"
                   title="Por favor, introduce tu número de teléfono" />
               </label>
               <label class="label" for="linkedin">
                 Linkedin
-                <input class="completeFieldset-input js-inputLinkedin" placeholder="Ej: linkedin.com/in/sally.hill"
+                <input class="completeFieldset-input js-inputLinkedin js-allInputs" placeholder="Ej: linkedin.com/in/sally.hill"
                   id="linkedin" type="text" name="linkedin" title="Introduce tu linkedin" required />
               </label>
               <label class="label" for="gitHub">
                 GitHub
-                <input class="completeFieldset-input js-inputGitHub" placeholder="Ej: @sally-hill" id="gitHub" type="text"
+                <input class="completeFieldset-input js-inputGitHub js-allInputs" placeholder="Ej: @sally-hill" id="gitHub" type="text"
                   name="gitHub" title="Introduce tu GitHub" required />
               </label>
             </div>
           </fieldset>
 
           <!-- Share fieldset -->
-          <fieldset class="fieldsetContainer section2__form--shareFieldset">
+          <fieldset class="fieldsetContainer section2__form--shareFieldset collapsed">
             <legend class="titleContainer">
               <div class="titleContainer__titleItem">
                 <i class="fas fa-share-alt icon"></i>
@@ -235,16 +197,16 @@
             <div class="shareContainer">
               <!-- <div class="js-collapsed"> -->
               <div class="btnContainer">
-                <button class="btnContainer__share-btn js-shareBtn shareBtnColor1">
+                <button class="btnContainer__share-btn js-createBtn createBtnColor1">
                   <i class="btnContainer__share-btn--icon far fa-address-card"></i>
                   <span class="btnContainer__share-btn--text" title="Crear la tarjeta">Crear tarjeta</span>
                 </button>
               </div>
               <section class="shareSection js-shareSection hidden">
                 <p class="shareSection__paragraph">La tarjeta ha sido creada:</p>
-                <a class="link shareSection__link-share" title="Ir a la tarjeta"
-                  href="#">https://awesome-profile-card.com?id=A456DF0001</a>
-                <a class="link shareSection__link-shareTwitter" title="Comparte en twitter la tarjeta" href="#"><i
+                <a class="link shareSection__link-share js-createCardLink" title="Ir a la tarjeta"
+                ></a>
+                <a class="link shareSection__link-shareTwitter js-twitterLink" title="Comparte en twitter la tarjeta" href="#"><i
                     class="fab fa-twitter"></i> Compartir en twitter</a>
               </section>
             </div>
