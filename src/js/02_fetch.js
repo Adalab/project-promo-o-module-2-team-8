@@ -29,7 +29,7 @@ function handleCreateCard(ev){
         collapsableShareSection.classList.remove('hidden');
       linkCreateCard.innerHTML= formObject.cardURL;
       linkCreateCard.href= formObject.cardURL;
-      const textCard = 'Mira mi tarjeta';
+      const textCard = 'Mira la tarjeta que me ha creado Adufflabeers!! 😱😱';
         twitterLink.href = `https://twitter.com/intent/tweet?text=${textCard}&url=${formObject.cardURL}`;
       } else{
         // catch(error)=> console.log(`Se ha producido un error: ${error}`);
