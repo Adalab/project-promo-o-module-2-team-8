@@ -338,11 +338,11 @@ resetBtn.addEventListener("click", handlerClickResetBtn);
 
 // Fill function Listeners
 
-inputName.addEventListener("change", handlerInputPreview);
-inputJob.addEventListener("change", handlerInputPreview);
-inputEmail.addEventListener("change", handlerInputPreview);
-inputPhone.addEventListener("change", handlerInputPreview);
-inputLinkedin.addEventListener("change", handlerInputPreview);
+inputName.addEventListener("keyup", handlerInputPreview);
+inputJob.addEventListener("keyup", handlerInputPreview);
+inputEmail.addEventListener("keyup", handlerInputPreview);
+inputPhone.addEventListener("keyup", handlerInputPreview);
+inputLinkedin.addEventListener("keyup", handlerInputPreview);
 inputGitHub.addEventListener("keyup", handlerInputPreview);
 
 // function handlerUpdatePreview(){
