@@ -85,6 +85,7 @@ function paintCardPreview(event) {
     paintChoice3();
     formObject.palette = 3;
   }
+  setInLocalStorage();
 }
 
 function paintChoice2() {
@@ -183,9 +184,14 @@ function handlerInputPreview() {
   gitHubInputPreview();
 
   //save input values
-  localStorage.setItem("formObject", JSON.stringify(formObject));
-  loadSavedUserData();
+  setInLocalStorage();
+  // localStorage.setItem("formObject", JSON.stringify(formObject));
 }
+
+const setInLocalStorage = () => {
+  const stringifyformObject = JSON.stringify(formObject);
+  localStorage.setItem("formObject", stringifyformObject);
+};
 
 //función botón reset
 
@@ -221,10 +227,99 @@ function handlerClickResetBtn() {
 
 // Recover saved input value (localStorage):
 function loadSavedUserData() {
-  const savedUserData = JSON.parse(localStorage.getItem("formObject"));
+  const savedUserData = localStorage.getItem("formObject");
   if (savedUserData !== null) {
-    formObject = savedUserData;
+    formObject = JSON.parse(savedUserData);
+    renderLSValues();
   }
+}
+
+function renderLSValues() {
+  renderLSName();
+  renderLSJob();
+  renderLSEmail();
+  renderLSPhone();
+  renderLSLinkedin();
+  renderLSGithub();
+  renderLSPalette();
+  // renderLSPhoto();
+
+  setInLocalStorage();
+}
+
+function renderLSName() {
+  inputName.value = formObject.name;
+  const namePreview = inputName.value;
+  if (namePreview === "") {
+    cardName.innerHTML = "Nombre Apellido";
+  } else {
+    cardName.innerHTML = namePreview;
+  }
+}
+
+function renderLSJob() {
+  inputJob.value = formObject.job;
+  const jobPreview = inputJob.value;
+  if (jobPreview === "") {
+    cardJob.innerHTML = "Front developer";
+  } else {
+    cardJob.innerHTML = inputJob.value;
+  }
+}
+
+function renderLSEmail() {
+  inputEmail.value = formObject.email;
+  const emailPreview = inputEmail.value;
+  if (emailPreview === "") {
+    cardEmail.href = ``;
+  } else {
+    cardEmail.href = `mailto:${emailPreview}`;
+  }
+}
+
+function renderLSPhone() {
+  inputPhone.value = formObject.phone;
+  const phonePreview = inputPhone.value;
+  if (phonePreview === "") {
+    cardPhone.href = ``;
+  } else {
+    cardPhone.href = `${phonePreview}`;
+  }
+}
+
+function renderLSLinkedin() {
+  inputLinkedin.value = formObject.linkedin;
+  const linkedinPreview = inputLinkedin.value;
+  if (linkedinPreview === "") {
+    cardLinkedin.href = ``;
+  } else {
+    cardLinkedin.href = `${linkedinPreview}`;
+  }
+}
+
+function renderLSGithub() {
+  inputGitHub.value = formObject.github;
+  const gitHubPreview = inputGitHub.value;
+  if (gitHubPreview === "") {
+    cardGitHub.href = ``;
+  } else {
+    cardGitHub.href = `${gitHubPreview}`;
+  }
+}
+
+function renderLSPalette() {
+  const paletteChecked = formObject.palette;
+  if (paletteChecked === 1) {
+    paintDefault();
+  } else if (paletteChecked === 2) {
+    paintChoice2();
+  } else {
+    paintChoice3();
+  }
+  palettesRadio[paletteChecked - 1].checked = true;
+  // const findPaletteId = palettesRadio.find(
+  //   (eachPalette) => eachPalette.id === paletteChecked
+  // );
 }
 
 // start app
@@ -248,8 +343,10 @@ inputJob.addEventListener("change", handlerInputPreview);
 inputEmail.addEventListener("change", handlerInputPreview);
 inputPhone.addEventListener("change", handlerInputPreview);
 inputLinkedin.addEventListener("change", handlerInputPreview);
-inputGitHub.addEventListener("change", handlerInputPreview);
+inputGitHub.addEventListener("keyup", handlerInputPreview);
 
 // function handlerUpdatePreview(){
 //   cardName.innerHTML= formObject.nameSurname.value;
 // }
+
+console.log(formObject);
