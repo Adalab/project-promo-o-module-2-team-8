@@ -185,7 +185,6 @@ function handlerInputPreview() {
 
   //save input values
   setInLocalStorage();
-  // localStorage.setItem("formObject", JSON.stringify(formObject));
 }
 
 const setInLocalStorage = () => {
@@ -196,7 +195,8 @@ const setInLocalStorage = () => {
 //función botón reset
 
 function handlerClickResetBtn() {
-  formObject.palette = paintDefault();
+  formObject.palette = 1;
+  paintDefault();
   palettesRadio[0].checked = true;
 
   formObject.name = "";
@@ -317,9 +317,6 @@ function renderLSPalette() {
     paintChoice3();
   }
   palettesRadio[paletteChecked - 1].checked = true;
-  // const findPaletteId = palettesRadio.find(
-  //   (eachPalette) => eachPalette.id === paletteChecked
-  // );
 }
 
 // start app

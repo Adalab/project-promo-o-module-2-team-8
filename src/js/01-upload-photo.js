@@ -1,9 +1,9 @@
-'use strict';
+"use strict";
 
 const fr = new FileReader();
-const fileField = document.querySelector('.js__profile-upload-btn');
-const profileImage = document.querySelector('.js__profile-image');
-const profilePreview = document.querySelector('.js__profile-preview');
+const fileField = document.querySelector(".js__profile-upload-btn");
+const profileImage = document.querySelector(".js__profile-image");
+const profilePreview = document.querySelector(".js__profile-preview");
 
 /**
  * Recoge el archivo añadido al campo de tipo "file"
@@ -15,7 +15,7 @@ const profilePreview = document.querySelector('.js__profile-preview');
  */
 function getImage(e) {
   const myFile = e.currentTarget.files[0];
-  fr.addEventListener('load', writeImage);
+  fr.addEventListener("load", writeImage);
   fr.readAsDataURL(myFile);
 }
 
@@ -33,7 +33,7 @@ function writeImage() {
   profilePreview.style.backgroundImage = `url(${fr.result})`;
 
   formObject.photo = fr.result; //esto se envía al servidor para que lo guarde
-  localStorage.setItem('formObject', JSON.stringify(formObject));
+  localStorage.setItem("formObject", JSON.stringify(formObject));
 }
 
 /**
@@ -49,4 +49,4 @@ function fakeFileClick() {
  * - al botón visible para generar el click automático
  * - al campo oculto para cuando cambie su value
  */
-fileField.addEventListener('change', getImage);
+fileField.addEventListener("change", getImage);
