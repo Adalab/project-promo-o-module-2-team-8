@@ -36,13 +36,13 @@ function handleCreateCard(ev){
         linkCreateCard.href= formObject.cardURL;
         messageCard.classList.add("js-message");
         messageCard.classList.remove("js-hiddenMessage");
+        const textCard= "¡Mira la tarjeta qué me ha creado Adufflabeers! 😱😱"
         writeMessage('¡Mira la tarjeta qué me ha creado Adufflabeers! <br>   😱😱');
       
         twitterLink.href = `https://twitter.com/intent/tweet?text=${textCard}&url=${formObject.cardURL}`;
       } else{
         // catch(error)=> console.log(`Se ha producido un error: ${error}`);
         writeMessage('¡Debes rellenar todos los campos! <br> :(');
-        console.log("error")
         messageCard.classList.add("js-message");
         messageCard.classList.remove("js-hiddenMessage");
           // window.alert('comprueba que has rellenado los campos requeridos');
