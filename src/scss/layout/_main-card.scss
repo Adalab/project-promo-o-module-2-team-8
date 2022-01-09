@@ -265,6 +265,10 @@
   }
   .color-orange {
     background-color: $fadedOrange;
+    :hover {
+      background-color: $lightGreyBlue;
+      color: $fadedOrange;
+    }
   }
   .color-lightBlue {
     background-color: $lightGreyBlue;
@@ -440,4 +444,19 @@
 //input seleccionar imagen
 #photo {
   display: none;
+}
+
+.js-hiddenMessage {
+  display: none;
+}
+
+.js-message {
+  display: flex;
+  color: $tomato;
+  margin-left: 50px;
+  margin-top: 25px;
+  border-radius: 12px;
+  border: 2px solid $tomato;
+  padding: 15px;
+  text-align: center;
 }
