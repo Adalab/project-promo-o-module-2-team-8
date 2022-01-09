@@ -218,8 +218,7 @@ function handlerClickResetBtn() {
   formObject.github = '';
   inputGitHub.value = formObject.github;
 
-  formObject.photo = `url(${defaultImageUrl})`;
-
+  formObject.photo = '';
   cardPhoto.style.backgroundImage = `url(${defaultImageUrl})`;
   cardPreviewPhoto.style.backgroundImage = '';
 
@@ -251,9 +250,12 @@ function renderLSValues() {
 }
 
 function renderLSPhoto() {
-  if (formObject.photo !== defaultImageUrl) {
+  if (formObject.photo) {
     cardPhoto.style.backgroundImage = `url(${formObject.photo})`;
     cardPreviewPhoto.style.backgroundImage = `url(${formObject.photo})`;
+  } else {
+    cardPhoto.style.backgroundImage = `url(${defaultImageUrl})`;
+    cardPreviewPhoto.style.backgroundImage = '';
   }
 }
 
