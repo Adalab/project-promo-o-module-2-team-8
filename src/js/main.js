@@ -357,5 +357,3 @@ inputGitHub.addEventListener('keyup', handlerInputPreview);
 // function handlerUpdatePreview(){
 //   cardName.innerHTML= formObject.nameSurname.value;
 // }
-
-console.log(formObject);
