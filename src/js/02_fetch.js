@@ -27,8 +27,8 @@ function handleCreateCard(ev){
       function writeMessage(message) {
         messageCard.innerHTML = message;
     }
-
-      if(formObject.success){
+    // cardPhoto.style.backgroundImage = 'url("./assets/images/fondo.jpg")'
+      if(formObject.success) {
         createBtn.classList.remove('createBtnColor1');
         createBtn.classList.add('createBtnColor2');
         collapsableShareSection.classList.remove('hidden');
@@ -36,8 +36,8 @@ function handleCreateCard(ev){
         linkCreateCard.href= formObject.cardURL;
         messageCard.classList.add("js-message");
         messageCard.classList.remove("js-hiddenMessage");
-        const textCard= "¡Mira la tarjeta qué me ha creado Adufflabeers! 😱😱"
-        writeMessage('¡Mira la tarjeta qué me ha creado Adufflabeers! <br>   😱😱');
+        const textCard= "¡Mira la tarjeta que me ha creado Adufflabeers! 😱😱"
+        writeMessage('¡Mira la tarjeta que me ha creado Adufflabeers! <br>   😱😱');
       
         twitterLink.href = `https://twitter.com/intent/tweet?text=${textCard}&url=${formObject.cardURL}`;
       } else{
