@@ -1,14 +1,14 @@
-#Team Adufflabers
+# Team Adufflabers
 
-##Objetivo de la aplicación 
+## Objetivo de la aplicación 
 Esta aplicación web tiene como objetivo crear tarjetas de visita personalizadas. introduciendo nuestros datos profesionales, podemos obtener una vista previa de la misma, para después poder generarla y poder subirla a Twitter. 
 
-##Arrancar el proyecto
+## Arrancar el proyecto
 Para poder arrancar el proyecto en local se requiere el uso de dos comandos:
 -Npm install 
 -Npm start
 
-##Tecnologías utilizadas en el proyecto 
+## Tecnologías utilizadas en el proyecto 
 -Uso avanzado de formularios HTML
 -Maquetación usando CSS avanzado, como flex y grid
 -Uso de mediaqueries para que el diseño sea adaptable al dispositivo usando la estrategia mobile first
